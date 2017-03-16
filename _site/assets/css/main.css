@@ -1,0 +1,973 @@
+@font-face {
+  font-family: 'Satisfy';
+  src: url("/assets/fonts/Satisfy-Regular.ttf"); }
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: OpenSansCondensed;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  background-color: black;
+  color: white; }
+
+a {
+  text-decoration: underline;
+  color: #D2232A; }
+  a:hover {
+    color: white; }
+
+.bottom-stripe {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 36px;
+  background-color: #D2232A; }
+  @media (min-width: 769px) {
+    .bottom-stripe {
+      width: calc(100% - 96px); } }
+  .bottom-stripe .motto {
+    font-family: satisfy;
+    font-size: 24px; }
+    .bottom-stripe .motto p {
+      margin: 5px 40px 5px 5px;
+      text-align: right; }
+      .bottom-stripe .motto p span {
+        color: black; }
+
+.right-red-stripe {
+  width: 36px;
+  height: 100vh;
+  background-color: #D2232A;
+  position: fixed;
+  right: 0; }
+  @media (min-width: 769px) {
+    .right-red-stripe {
+      right: 96px; } }
+  .right-red-stripe .menu-wrap {
+    display: none;
+    height: 36px;
+    width: 36px; }
+    .right-red-stripe .menu-wrap .material-icons {
+      font-size: 175%;
+      text-align: center; }
+  .right-red-stripe .drop-letter {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    top: 9px; }
+    @media (max-width: 320px) {
+      .right-red-stripe .drop-letter {
+        display: none; } }
+    @media (min-width: 321px) and (max-width: 425px) {
+      .right-red-stripe .drop-letter {
+        display: none; } }
+    @media (min-width: 426px) and (max-width: 768px) {
+      .right-red-stripe .drop-letter {
+        display: none; } }
+    .right-red-stripe .drop-letter b {
+      display: block;
+      font-size: 1.75em;
+      text-transform: uppercase;
+      text-align: center;
+      color: black;
+      text-shadow: -2px -2px 0 white, -2px -1px 0 white, -2px 0px 0 white, -2px 1px 0 white, -2px 2px 0 white, -1px -2px 0 white, -1px -1px 0 white, -1px 0px 0 white, -1px 1px 0 white, -1px 2px 0 white, 0px -2px 0 white, 0px -1px 0 white, 0px 0px 0 white, 0px 1px 0 white, 0px 2px 0 white, 1px -2px 0 white, 1px -1px 0 white, 1px 0px 0 white, 1px 1px 0 white, 1px 2px 0 white, 2px -2px 0 white, 2px -1px 0 white, 2px 0px 0 white, 2px 1px 0 white, 2px 2px 0 white; }
+
+.red-left-stripe {
+  width: 9px;
+  height: 100vh;
+  background-color: #D2232A;
+  position: fixed;
+  left: 128px; }
+  @media (max-width: 320px) {
+    .red-left-stripe {
+      display: none; } }
+  @media (min-width: 321px) and (max-width: 425px) {
+    .red-left-stripe {
+      display: none; } }
+  @media (min-width: 426px) and (max-width: 768px) {
+    .red-left-stripe {
+      display: none; } }
+
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: 48px;
+  width: calc(100% - 36px);
+  margin: 0;
+  border-bottom: 2px solid #D2232A; }
+  @media (min-width: 769px) {
+    .header {
+      width: 100%; } }
+  @media (min-width: 769px) {
+    .header .company-name {
+      display: none; } }
+  .header .company-name h1 {
+    margin: 0;
+    padding: 9px 0 7px 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.75em; }
+    @media (max-width: 320px) {
+      .header .company-name h1 {
+        font-size: 1.4em; } }
+    .header .company-name h1 span {
+      color: #D2232A; }
+  .header .large-screen {
+    display: none; }
+    @media (min-width: 769px) {
+      .header .large-screen {
+        display: block;
+        text-align: right;
+        text-transform: uppercase;
+        margin-right: 36px; }
+        .header .large-screen h1 {
+          margin: 0;
+          padding: 9px 0 7px 0;
+          font-size: 1.75em; }
+          .header .large-screen h1 span {
+            visibility: hidden; } }
+
+.content {
+  position: fixed;
+  top: 50px;
+  overflow: scroll;
+  max-width: calc(100% - 36px);
+  width: 100vw;
+  max-height: calc(100% - 87px);
+  height: 100vh; }
+  @media (min-width: 769px) {
+    .content {
+      left: 137px;
+      max-width: calc(100% - 269px); } }
+  .content .about, .content .interior-design, .content .interior-design-lozio, .content .interior-design-marhaba, .content .interior-design-private, .content .design, .content .design-articles, .content .design-bier-fabriek-1, .content .design-bier-fabriek-2, .content .art-and-graphic, .content .art-bier-fabriek-delft, .content .art-bier-fabriek-amsterdam, .content .reviews-page-1, .content .reviews-page-2, .content .customers, .content .contact {
+    position: relative;
+    height: inherit;
+    max-height: 100%;
+    max-width: 100%;
+    width: inherit;
+    border-bottom: 1px solid #D2232A; }
+  @media (min-width: 426px) and (max-width: 768px) {
+    .content p, .content a {
+      font-size: 1.2em; } }
+  @media (max-width: 320px) {
+    .content p, .content a {
+      font-size: 0.8em; }
+    .content h1 {
+      font-size: 1.5em; }
+    .content h3 {
+      font-size: 1em; } }
+  .content .about .title {
+    position: relative;
+    padding: 7vh 0; }
+    .content .about .title h2 {
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0; }
+      .content .about .title h2 span {
+        color: #D2232A; }
+      @media (min-width: 426px) and (max-width: 768px) {
+        .content .about .title h2 {
+          font-size: 1.7em; } }
+      @media (max-width: 320px) {
+        .content .about .title h2 {
+          font-size: 1em; } }
+  .content .about .description p {
+    padding: 0.67934783vh 1.20772947vw;
+    line-height: 1.5;
+    text-align: center; }
+    @media (max-width: 320px) {
+      .content .about .description p {
+        line-height: 1.15; } }
+  .content .about .operating-areas {
+    position: relative;
+    margin-top: 9vh; }
+    .content .about .operating-areas p {
+      text-align: center;
+      padding: 0.67934783vh 1.20772947vw; }
+    .content .about .operating-areas .areas {
+      text-align: center; }
+      .content .about .operating-areas .areas ul {
+        padding: 0;
+        margin: 5vh 0;
+        list-style: none; }
+        .content .about .operating-areas .areas ul li {
+          margin-top: 2vh; }
+  .content .about .we-define-it {
+    position: absolute;
+    padding: 0 0 0.67934783vh 2.41545894vw;
+    bottom: 0; }
+    .content .about .we-define-it p {
+      margin: 0; }
+  .content .interior-design h1 {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 4.34782609vh 3.8647343vw 6.52173913vh 0; }
+    @media (max-width: 320px) {
+      .content .interior-design h1 {
+        padding: 4vh 3.8647343vw 2.5vh 0; } }
+  .content .interior-design h3 {
+    text-transform: uppercase;
+    color: #D2232A;
+    padding: 0 0 0 2.41545894vw; }
+    @media (max-width: 320px) {
+      .content .interior-design h3 {
+        padding: 0 0 0 2vw; } }
+  .content .interior-design p {
+    padding: 0.67934783vh 1.20772947vw;
+    text-align: center; }
+  .content .interior-design .project {
+    margin-top: 6.52173913vh; }
+    .content .interior-design .project p {
+      margin-bottom: 0; }
+    .content .interior-design .project #WeCanWorkItHout {
+      margin-top: 0;
+      padding-top: 0;
+      text-transform: uppercase; }
+      .content .interior-design .project #WeCanWorkItHout span {
+        color: #D2232A; }
+  .content .interior-design .realization {
+    margin-top: 6.52173913vh; }
+  .content .interior-design-lozio .lozio-img-1, .content .interior-design-lozio .marhaba-img-1, .content .interior-design-lozio .private-img-1, .content .interior-design-marhaba .lozio-img-1, .content .interior-design-marhaba .marhaba-img-1, .content .interior-design-marhaba .private-img-1, .content .interior-design-private .lozio-img-1, .content .interior-design-private .marhaba-img-1, .content .interior-design-private .private-img-1 {
+    position: absolute;
+    top: 0.67934783vh;
+    left: 1.20772947vw;
+    background-color: white;
+    width: 38.647343vw;
+    max-width: 250px; }
+    .content .interior-design-lozio .lozio-img-1 img, .content .interior-design-lozio .marhaba-img-1 img, .content .interior-design-lozio .private-img-1 img, .content .interior-design-marhaba .lozio-img-1 img, .content .interior-design-marhaba .marhaba-img-1 img, .content .interior-design-marhaba .private-img-1 img, .content .interior-design-private .lozio-img-1 img, .content .interior-design-private .marhaba-img-1 img, .content .interior-design-private .private-img-1 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .interior-design-lozio .lozio-img-2, .content .interior-design-lozio .marhaba-img-2, .content .interior-design-lozio .private-img-2, .content .interior-design-marhaba .lozio-img-2, .content .interior-design-marhaba .marhaba-img-2, .content .interior-design-marhaba .private-img-2, .content .interior-design-private .lozio-img-2, .content .interior-design-private .marhaba-img-2, .content .interior-design-private .private-img-2 {
+    position: absolute;
+    width: 60.3864734vw;
+    max-width: 450px;
+    top: 19.701087vh;
+    right: 1.20772947vw;
+    background-color: white; }
+    .content .interior-design-lozio .lozio-img-2 img, .content .interior-design-lozio .marhaba-img-2 img, .content .interior-design-lozio .private-img-2 img, .content .interior-design-marhaba .lozio-img-2 img, .content .interior-design-marhaba .marhaba-img-2 img, .content .interior-design-marhaba .private-img-2 img, .content .interior-design-private .lozio-img-2 img, .content .interior-design-private .marhaba-img-2 img, .content .interior-design-private .private-img-2 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .interior-design-lozio .lozio-img-3, .content .interior-design-lozio .marhaba-img-3, .content .interior-design-lozio .private-img-3, .content .interior-design-marhaba .lozio-img-3, .content .interior-design-marhaba .marhaba-img-3, .content .interior-design-marhaba .private-img-3, .content .interior-design-private .lozio-img-3, .content .interior-design-private .marhaba-img-3, .content .interior-design-private .private-img-3 {
+    position: absolute;
+    top: 50.951087vh;
+    left: 1.20772947vw;
+    background-color: white;
+    width: 38.647343vw;
+    max-width: 250px; }
+    .content .interior-design-lozio .lozio-img-3 img, .content .interior-design-lozio .marhaba-img-3 img, .content .interior-design-lozio .private-img-3 img, .content .interior-design-marhaba .lozio-img-3 img, .content .interior-design-marhaba .marhaba-img-3 img, .content .interior-design-marhaba .private-img-3 img, .content .interior-design-private .lozio-img-3 img, .content .interior-design-private .marhaba-img-3 img, .content .interior-design-private .private-img-3 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .interior-design-lozio .lozio-info, .content .interior-design-lozio .marhaba-info, .content .interior-design-lozio .private-info, .content .interior-design-marhaba .lozio-info, .content .interior-design-marhaba .marhaba-info, .content .interior-design-marhaba .private-info, .content .interior-design-private .lozio-info, .content .interior-design-private .marhaba-info, .content .interior-design-private .private-info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .interior-design-lozio .lozio-info p, .content .interior-design-lozio .marhaba-info p, .content .interior-design-lozio .private-info p, .content .interior-design-marhaba .lozio-info p, .content .interior-design-marhaba .marhaba-info p, .content .interior-design-marhaba .private-info p, .content .interior-design-private .lozio-info p, .content .interior-design-private .marhaba-info p, .content .interior-design-private .private-info p {
+      margin: 1vh 0 0 0; }
+  .content .interior-design-private .private-img-1 {
+    width: 30vw; }
+  .content .interior-design-private .private-img-2 {
+    top: 15vh;
+    width: 55vw; }
+  .content .interior-design-private .private-img-3 {
+    top: 40vh;
+    width: 30vw; }
+  .content .design .title h1 {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 1em 0.5em 1.5em 0; }
+  .content .design .description p {
+    padding: 10px;
+    margin-top: 30%;
+    text-align: center;
+    line-height: 1.6; }
+  .content .design-articles .clipboard-draw, .content .design-articles .cutting-board-draw, .content .design-articles .reserved-draw {
+    width: 200px;
+    padding: 5px; }
+    .content .design-articles .clipboard-draw img, .content .design-articles .cutting-board-draw img, .content .design-articles .reserved-draw img {
+      max-width: 100%; }
+  .content .design-articles .reserved-draw img {
+    margin-left: 33%; }
+  .content .design-articles .cutting-board-draw img {
+    margin-left: 80%; }
+  .content .design-articles .clipboard-pic {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    background-color: white;
+    width: 200px; }
+    .content .design-articles .clipboard-pic img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .design-articles .reserved-pic {
+    position: relative;
+    top: 20px;
+    left: 50px;
+    background-color: white;
+    width: 200px; }
+    .content .design-articles .reserved-pic img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .design-articles .cutting-board-pic {
+    position: relative;
+    top: 30px;
+    left: 163px;
+    background-color: white;
+    width: 200px; }
+    .content .design-articles .cutting-board-pic img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .design-bier-fabriek-1 .bacheca-draw {
+    position: relative;
+    margin-left: 15px;
+    top: 15px;
+    width: 90px; }
+    .content .design-bier-fabriek-1 .bacheca-draw img {
+      max-width: 100%; }
+  .content .design-bier-fabriek-1 .barrel-draw {
+    margin-top: -190px;
+    margin-left: 50%;
+    width: 170px; }
+    .content .design-bier-fabriek-1 .barrel-draw img {
+      padding: 5px;
+      max-width: 100%; }
+  .content .design-bier-fabriek-1 .barrel-pic {
+    background-color: white;
+    width: 160px;
+    margin-left: 15px;
+    margin-top: 40px; }
+    .content .design-bier-fabriek-1 .barrel-pic img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .design-bier-fabriek-1 .bacheca-pic {
+    margin-left: auto;
+    margin-right: 15px;
+    margin-top: -270px;
+    background-color: white;
+    width: 130px; }
+    .content .design-bier-fabriek-1 .bacheca-pic img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .design-bier-fabriek-1 .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .design-bier-fabriek-1 .info p {
+      margin: 1vh 0 0 0; }
+  .content .design-bier-fabriek-2 .photo {
+    position: relative;
+    width: 270px;
+    margin-left: 52px;
+    top: 5px;
+    background-color: white; }
+    .content .design-bier-fabriek-2 .photo img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .design-bier-fabriek-2 .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .design-bier-fabriek-2 .info p {
+      margin: 1vh 0 0 0; }
+  .content .art-and-graphic .title h1 {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 1em 0.5em 1.5em 0; }
+  .content .art-and-graphic .description p {
+    padding: 10px;
+    margin-top: 30%;
+    text-align: center;
+    line-height: 1.6; }
+  .content .art-bier-fabriek-delft .delft-art-1, .content .art-bier-fabriek-delft .delft-art-2, .content .art-bier-fabriek-delft .delft-art-3 {
+    display: inline-block;
+    position: relative;
+    width: 119px;
+    margin-left: 5px;
+    top: 5px;
+    background-color: white; }
+    .content .art-bier-fabriek-delft .delft-art-1 img, .content .art-bier-fabriek-delft .delft-art-2 img, .content .art-bier-fabriek-delft .delft-art-3 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .art-bier-fabriek-delft .delft-art-2 {
+    top: 50px; }
+  .content .art-bier-fabriek-delft .delft-art-3 {
+    top: 100px; }
+  .content .art-bier-fabriek-delft .delft-art-4 {
+    top: 140px;
+    position: relative;
+    width: 350px;
+    background-color: white;
+    margin: 0 auto; }
+    .content .art-bier-fabriek-delft .delft-art-4 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .art-bier-fabriek-delft .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .art-bier-fabriek-delft .info p {
+      margin: 1vh 0 0 0; }
+  .content .art-bier-fabriek-amsterdam .amsterdam-art-1 {
+    position: relative;
+    width: 175px;
+    margin-left: 5px;
+    top: 5px;
+    background-color: white; }
+    .content .art-bier-fabriek-amsterdam .amsterdam-art-1 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .art-bier-fabriek-amsterdam .amsterdam-art-2 {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    top: 5px;
+    background-color: white; }
+    .content .art-bier-fabriek-amsterdam .amsterdam-art-2 img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .art-bier-fabriek-amsterdam .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .art-bier-fabriek-amsterdam .info p {
+      margin: 1vh 0 0 0; }
+  .content .reviews-page-1 .title h1 {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 1em 0.5em 1.5em 0; }
+  .content .reviews-page-1 .entree {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    .content .reviews-page-1 .entree img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .reviews-page-1 .bierfabriek-delft {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    .content .reviews-page-1 .bierfabriek-delft img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .reviews-page-1 .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .reviews-page-1 .info p {
+      margin: 1vh 0 0 0; }
+  .content .reviews-page-2 .giuseppe {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    .content .reviews-page-2 .giuseppe img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .reviews-page-2 .genius {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    .content .reviews-page-2 .genius img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  .content .reviews-page-2 .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    .content .reviews-page-2 .info p {
+      margin: 1vh 0 0 0; }
+  .content .customers .title {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 1em 0.5em 1.5em 0; }
+  .content .customers .logos {
+    height: 60vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    position: relative;
+    background-color: white; }
+    .content .customers .logos .bacaro, .content .customers .logos .marhaba, .content .customers .logos .lozio, .content .customers .logos .bierfabriek-ams, .content .customers .logos .besseling, .content .customers .logos .feduzzi, .content .customers .logos .bierfabriek-delft, .content .customers .logos .konijnenburg, .content .customers .logos .gusto, .content .customers .logos .repubblica {
+      width: 28vw; }
+      .content .customers .logos .bacaro img, .content .customers .logos .marhaba img, .content .customers .logos .lozio img, .content .customers .logos .bierfabriek-ams img, .content .customers .logos .besseling img, .content .customers .logos .feduzzi img, .content .customers .logos .bierfabriek-delft img, .content .customers .logos .konijnenburg img, .content .customers .logos .gusto img, .content .customers .logos .repubblica img {
+        display: block;
+        max-width: 96%;
+        padding: 2%; }
+  .content .contact h2 {
+    color: #D2232A; }
+  .content .contact p, .content .contact a {
+    color: white; }
+  .content .contact h2, .content .contact p, .content .contact a {
+    text-align: center; }
+  .content .contact a {
+    display: block; }
+  .content .contact .location {
+    position: relative;
+    padding-top: 10vh; }
+    .content .contact .location h2 {
+      margin: 0; }
+  .content .contact .brochure {
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    text-align: center; }

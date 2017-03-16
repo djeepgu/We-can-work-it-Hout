@@ -1,0 +1,39 @@
+.header
+  position: fixed
+  z-index: 2
+  top: 0
+  height: 48px
+  width: calc(100% - 36px)
+  @include bp(larger)
+    width: 100%
+  margin: 0
+  border-bottom: 2px solid $houtRed
+
+  .company-name
+    @include bp(larger)
+      display: none
+    h1
+      margin: 0
+      padding: 9px 0 7px 0
+      text-transform: uppercase
+      text-align: center
+      font-size: 1.75em
+      @include bp(small)
+        font-size: 1.4em
+      span
+        color: $houtRed
+
+
+  .large-screen
+    display: none
+    @include bp(larger)
+      display: block
+      text-align: right
+      text-transform: uppercase
+      margin-right: 36px
+      h1
+        margin: 0
+        padding: 9px 0 7px 0
+        font-size: 1.75em
+        span
+          visibility: hidden

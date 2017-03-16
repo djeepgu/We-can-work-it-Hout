@@ -1,0 +1,47 @@
+@mixin bp($point)
+  @if $point == small
+    @media (max-width: 320px)
+       @content
+
+  @else if $point == normal
+    @media (min-width: 321px) and (max-width: 425px)
+      @content
+
+  @else if $point == large
+    @media (min-width: 426px) and (max-width: 768px)
+      @content
+
+  @else if $point == larger
+    @media (min-width: 769px)
+      @content
+
+  @else if $point == huge
+    @media (min-width: 1025px)
+      @content
+
+@function stroke($stroke, $color)
+  $shadow: ()
+  $from: $stroke*-1
+  @for $i from $from through $stroke
+   @for $j from $from through $stroke
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma)
+
+  @return $shadow
+
+@mixin stroke($stroke, $color)
+  text-shadow: stroke($stroke, $color)
+
+@mixin bottom-info
+  position: absolute
+  bottom: 0
+  padding-bottom: 0.67934783vh
+  text-align: center
+  left: 50%
+  transform: translate(-50%, 0)
+  p
+    margin: 1vh 0 0 0
+
+@mixin image-border
+  display: block
+  max-width: 96%
+  padding: 2%
