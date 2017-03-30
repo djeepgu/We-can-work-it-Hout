@@ -1,0 +1,52 @@
+#art-graphic-portfolio
+  .art-graphic-portfolio
+    .art-bier-fabriek-delft
+      //background-color: $purple
+      .delft-art-1, .delft-art-2, .delft-art-3
+        display: inline-block
+        position: relative
+        width: 119px
+        margin-left: 5px
+        top: 5px
+        background-color: white
+        img
+          @include image-border
+
+      .delft-art-2
+        top: 50px
+
+      .delft-art-3
+        top: 100px
+
+      .delft-art-4
+        top: 140px
+        position: relative
+        width: 350px
+        background-color: white
+        margin: 0 auto
+        img
+          @include image-border
+
+      .info
+        @include bottom-info
+
+    .art-bier-fabriek-amsterdam
+      //background-color: $purple
+      .amsterdam-art-1
+        position: relative
+        width: 175px
+        margin-left: 5px
+        top: 5px
+        background-color: white
+        img
+          @include image-border
+      .amsterdam-art-2
+        position: relative
+        width: 300px
+        margin: 0 auto
+        top: 5px
+        background-color: white
+        img
+          @include image-border
+      .info
+        @include bottom-info

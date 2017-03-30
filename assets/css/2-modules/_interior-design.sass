@@ -1,0 +1,50 @@
+#interior-design
+  .interior-design  
+    .header
+      height: 64px
+
+    .interior-design
+      max-width: calc(100vw - 36px)
+      width: 100vw
+      max-height: calc(100vh - 200px)
+      height: 100vh
+      @include bp(larger)
+        left: 82px
+        max-width: calc(100vw - 210px)
+      top: 64px
+      position: absolute
+      background-color: $olive
+      //padding: 0 20vw
+      h1
+        font-family: satisfy
+        text-align: right
+        margin: 0
+        padding: 4.34782609vh 3.8647343vw 6.52173913vh 0
+        @include bp(small)
+          padding: 4vh 3.8647343vw 2.5vh 0
+      h3
+        text-transform: uppercase
+        color: $houtRed
+        padding: 0 0 0 2.41545894vw
+        @include bp(small)
+          padding: 0 0 0 2vw
+      p
+        max-width: 1024px
+        padding: 0.67934783vh 1.20772947vw
+        text-align: center
+
+      .analysis
+
+      .project
+        margin-top: 6.52173913vh
+        p
+          margin-bottom: 0
+        #WeCanWorkItHout
+          margin-top: 0
+          padding-top: 0
+          text-transform: uppercase
+          span
+            color: $houtRed
+
+      .realization
+        margin-top: 6.52173913vh

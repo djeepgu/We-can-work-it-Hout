@@ -1,0 +1,96 @@
+#design-portfolio
+  .design-portfolio
+    .design-articles
+      //background-color: blue
+
+      .clipboard-draw, .cutting-board-draw, .reserved-draw
+        width: 200px
+        padding: 5px
+        img
+          max-width: 100%
+
+      .clipboard-draw
+
+      .reserved-draw
+        img
+          margin-left: 33%
+
+      .cutting-board-draw
+        img
+          margin-left: 80%
+
+
+      .clipboard-pic
+        position: relative
+        top: 10px
+        left: 5px
+        background-color: white
+        width: 200px
+        img
+          @include image-border
+      .reserved-pic
+        position: relative
+        top: 20px
+        left: 50px
+        background-color: white
+        width: 200px
+        img
+          @include image-border
+      .cutting-board-pic
+        position: relative
+        top: 30px
+        left: 163px
+        background-color: white
+        width: 200px
+        img
+          @include image-border
+
+    .design-bier-fabriek-1
+      //background-color: $aqua
+      .bacheca-draw
+        position: relative
+        margin-left: 15px
+        top: 15px
+        width: 90px
+        img
+          max-width: 100%
+
+      .barrel-draw
+        margin-top: -190px
+        margin-left: 50%
+        width: 170px
+        img
+          padding: 5px
+          max-width: 100%
+
+      .barrel-pic
+        background-color: white
+        width: 160px
+        margin-left: 15px
+        margin-top: 40px
+        img
+          @include image-border
+      .bacheca-pic
+        margin-left: auto
+        margin-right: 15px
+        margin-top: -270px
+        background-color: white
+        width: 130px
+        img
+          @include image-border
+
+      .info
+        @include bottom-info
+
+    .design-bier-fabriek-2
+      //background-color: $gray
+      .photo
+        position: relative
+        width: 270px
+        margin-left: 52px
+        top: 5px
+        background-color: white
+        img
+          @include image-border
+      .info
+        @include bottom-info

@@ -1,0 +1,103 @@
+.stripes
+  .top-stripe
+    z-index: 3
+    height: 9px
+    width: calc(100vw - 73px)
+    background-color: $houtRed
+    position: fixed
+    top: 64px
+    right: 0
+
+  .right-stripe
+    z-index: 3
+    width: 32px
+    height: calc(100vh - 96px)
+    background-color: $houtRed
+    position: fixed
+    right: 0
+    @include bp(larger)
+      right: 96px
+    .menu-wrap
+      display: none
+      height: 36px
+      width: 36px
+
+      .material-icons
+        font-size: 175%
+        text-align: center
+
+    @keyframes wiggle
+      0%
+        transform: rotate(0deg)
+      80%
+        transform: rotate(0deg)
+      85%
+        transform: rotate(8deg)
+      95%
+        transform: rotate(-8deg)
+      100%
+        transform: rotate(0deg)
+
+
+
+    .drop-letter
+      @include bp(small)
+        display: none
+      @include bp(normal)
+        display: none
+      @include bp(large)
+        display: none
+      position: absolute
+      width: 32px
+      height: 36px
+      //bottom: 84px
+      //background-color: blue
+      b
+        transition: margin 1s ease-out
+        animation: wiggle 1s infinite
+        display: block
+        margin-top: calc(100vh - 217px)
+        font-size: 2.5em
+        text-transform: uppercase
+        text-align: center
+        color: black
+        //text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white
+        @include stroke(2, white)
+        &:hover
+          cursor: pointer
+          animation: none
+
+  .bottom-stripe
+    z-index: 3
+    position: fixed
+    bottom: 96px
+    width: 100%
+    @include bp(larger)
+      width: calc(100% - 96px)
+    height: 30px
+    background-color: $houtRed
+
+    .motto
+      font-family: satisfy
+      font-size: 22px
+      p
+        margin: 0 40px 0 0
+        padding-top: 1px
+        text-align: right
+        span
+          color: black
+
+  .left-stripe
+    z-index: 3
+    width: 9px
+    height: calc(100vh - 64px)
+    background-color: $houtRed
+    position: fixed
+    left: 73px
+    bottom: 0
+    @include bp(small)
+      display: none
+    @include bp(normal)
+      display: none
+    @include bp(large)
+      display: none

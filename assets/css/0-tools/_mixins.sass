@@ -1,3 +1,4 @@
+
 @mixin bp($point)
   @if $point == small
     @media (max-width: 320px)
@@ -18,6 +19,20 @@
   @else if $point == huge
     @media (min-width: 1025px)
       @content
+
+// Mobile-first
+
+@mixin minw($pixels)
+  @media (min-width: $pixels/16+em)
+    @content
+
+// Desktop-first
+
+@mixin maxw($pixels)
+  @media (max-width: $pixels/16+em)
+    @content
+
+// Letter H white stroke around
 
 @function stroke($stroke, $color)
   $shadow: ()
