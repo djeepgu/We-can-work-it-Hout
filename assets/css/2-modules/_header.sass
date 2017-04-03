@@ -1,15 +1,16 @@
 .header
   position: fixed
-  background-color: black
+  display: inline-block
+  //background-color: green
   z-index: 2
   top: 0
-  height: calc(100vh - 164px)
-  width: calc(100vw - 36px)
-  @include bp(larger)
-    width: 100%
+  right: 0
+  height: 64px
+  width: 100vw
   margin: 0
-  transition: height 1s ease-out
+  transition: height 1.5s ease-in-out
   //border-bottom: 2px solid $houtRed
+
   .nav
     ul
       font-size: 0.75em
@@ -19,35 +20,43 @@
       li
         display: inline
         padding: 0 10px
+        
 
   .company-name
-    @include bp(larger)
-      display: none
+    position: absolute
+    bottom: 0
+    right: 8px
+    text-align: right
+    text-transform: uppercase
+    font-size: 1.3em
     h1
       margin: 0
-      padding: 9px 0 7px 0
-      text-transform: uppercase
-      text-align: center
-      font-size: 1.75em
-      @include bp(small)
-        font-size: 1.4em
+      padding: 0
       span
-        color: $houtRed
+        visibility: hidden
+
+#home-page
+  .header
+    height: calc(100vh - 128px)
+    background-color: black
+    .company-name
+      bottom: 0
+
+  .nav
+    visibility: hidden
+    @keyframes appear
+    0%
+      visibility: hidden
+
+    100%
+      visibility: visible
+    animation-name: appear
+    animation-duration: 1s
 
 
-  .large-screen
-    display: none
-    @include bp(larger)
-      display: block
-      text-align: right
-      text-transform: uppercase
-      margin-right: 8px
-      h1
-        position: absolute
-        bottom: 0
-        right: 8px
-        margin: 0
-        padding: 9px 0 7px 0
-        font-size: 2.5em
-        span
-          visibility: hidden
+.active
+  a
+    color: white
+    text-decoration: underline
+    &:hover
+      cursor: default

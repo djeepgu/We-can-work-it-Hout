@@ -1,19 +1,14 @@
 #home-page
   .home-page-content
-    display: none
-    position: fixed
+    position: absolute
     top: 73px
-    overflow: scroll
-    max-width: calc(100vw - 36px)
-    width: 100vw
-    max-height: calc(100vh - 200px)
-    height: 100vh
-    @include bp(larger)
-      left: 82px
-      max-width: calc(100vw - 210px)
-
+    left: 82px
+    width: calc(100vw - 210px)
+    height: calc(100vh - 199px)
 
     .about
+      height: inherit
+      width: inherit
       //background-color: $teal
       .title
         position: relative
@@ -26,27 +21,31 @@
           margin: 0
           span
             color: $houtRed
-          @include bp(large)
-            font-size: 1.7em
-          @include bp(small)
-            font-size: 1em
       .description
-        @include minw(1024)
-          padding: 0 20vw
+        //background-color: green
+        margin: auto
+        width: 50%
+        @include maxw(1305)
+          width: 70%
 
         p
           padding: 0.67934783vh 1.20772947vw
           line-height: 1.5
-          @include bp(small)
-            line-height: 1.15
           text-align: center
       .operating-areas
+        margin: auto
+        width: 30%
+        @include maxw(1305)
+          width: 50%
+        
+        //background-color: $teal
         position: relative
         margin-top: 9vh
         p
           text-align: center
           padding: 0.67934783vh 1.20772947vw
         .areas
+          //background-color: green
           text-align: center
           ul
             padding: 0
@@ -57,12 +56,14 @@
 
       .we-define-it
         position: relative
-        margin-left: 35vw
+        p
+          text-align: left
 
       .motto
         position: relative
-        margin-left: 45vw
+
         p
+          text-align: right
           font-family: satisfy
           font-size: 22px
           span

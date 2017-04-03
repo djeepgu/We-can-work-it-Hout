@@ -1,21 +1,32 @@
 #customers
   .customers
+    position: absolute
+    top: 73px
+    left: 82px
+    width: calc(100vw - 210px)
+    height: calc(100vh - 199px)
+    overflow: scroll
     //background-color: $olive
     .title
-      font-family: satisfy
-      text-align: right
-      margin: 0
-      padding: 1em 0.5em 1.5em 0
+      padding: 20px 30px
+      h1
+        font-family: satisfy
+        text-align: right
+        margin: 0
+      #some
+        padding-right: 70px
+      #cust
+
     .logos
-      height: 60vh
+      position: relative
+      padding: 50px 0
       display: flex
       flex-direction: row
       flex-wrap: wrap
       align-items: center
       justify-content: space-between
-      position: relative
       background-color: white
       .bacaro, .marhaba, .lozio, .bierfabriek-ams, .besseling, .feduzzi, .bierfabriek-delft, .konijnenburg, .gusto, .repubblica
-        width: 28vw
+        width: 15vw
         img
           @include image-border

@@ -98,7 +98,8 @@ a {
   background-color: transparent;
   /* 1 */
   -webkit-text-decoration-skip: objects;
-  /* 2 */ }
+  /* 2 */
+  text-decoration: none; }
 
 /**
  * Remove the outline on focused links when they are also active or hovered
@@ -414,7 +415,6 @@ html {
   color: white; }
 
 a {
-  text-decoration: underline;
   color: #D2232A; }
   a:hover {
     color: white; }
@@ -492,68 +492,92 @@ a {
   #art-graphic-portfolio .art-graphic-portfolio .art-bier-fabriek-amsterdam .info p {
     margin: 1vh 0 0 0; }
 
-#art-graphic .art-graphic .title h1 {
-  font-family: satisfy;
-  text-align: right;
-  margin: 0;
-  padding: 1em 0.5em 1.5em 0; }
-
-#art-graphic .art-graphic .description p {
-  padding: 10px;
-  margin-top: 30%;
-  text-align: center;
-  line-height: 1.6; }
-
-#contact .contact h2 {
-  color: #D2232A; }
-
-#contact .contact p, #contact .contact a {
-  color: white; }
-
-#contact .contact h2, #contact .contact p, #contact .contact a {
-  text-align: center; }
-
-#contact .contact a {
-  display: block; }
-
-#contact .contact .location {
-  position: relative;
-  padding-top: 10vh; }
-  #contact .contact .location h2 {
-    margin: 0; }
-
-#contact .contact .brochure {
+#art-graphic .art-graphic {
   position: absolute;
-  bottom: 1vh;
-  width: 100%;
-  text-align: center; }
+  top: 73px;
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px); }
+  #art-graphic .art-graphic .title {
+    padding: 20px 30px; }
+    #art-graphic .art-graphic .title h1 {
+      font-family: satisfy;
+      text-align: right;
+      margin: 0; }
+    #art-graphic .art-graphic .title #art {
+      padding-right: 70px; }
+  #art-graphic .art-graphic .description {
+    width: 50%;
+    margin: auto; }
+    @media (max-width: 84.375em) {
+      #art-graphic .art-graphic .description {
+        width: 70%; } }
+    #art-graphic .art-graphic .description p {
+      padding: 30px;
+      margin-top: 100px;
+      text-align: center;
+      line-height: 1.6; }
 
-#customers .customers .title {
-  font-family: satisfy;
-  text-align: right;
-  margin: 0;
-  padding: 1em 0.5em 1.5em 0; }
+#contact .contact {
+  position: absolute;
+  top: 73px;
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px); }
+  #contact .contact h2 {
+    color: #D2232A; }
+  #contact .contact p, #contact .contact a {
+    color: white; }
+  #contact .contact h2, #contact .contact p, #contact .contact a {
+    text-align: center; }
+  #contact .contact a {
+    display: block; }
+  #contact .contact .location {
+    position: relative;
+    padding-top: 10vh; }
+    #contact .contact .location h2 {
+      margin: 0; }
+  #contact .contact .brochure {
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+    text-align: center; }
 
-#customers .customers .logos {
-  height: 60vh;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  position: relative;
-  background-color: white; }
-  #customers .customers .logos .bacaro, #customers .customers .logos .marhaba, #customers .customers .logos .lozio, #customers .customers .logos .bierfabriek-ams, #customers .customers .logos .besseling, #customers .customers .logos .feduzzi, #customers .customers .logos .bierfabriek-delft, #customers .customers .logos .konijnenburg, #customers .customers .logos .gusto, #customers .customers .logos .repubblica {
-    width: 28vw; }
-    #customers .customers .logos .bacaro img, #customers .customers .logos .marhaba img, #customers .customers .logos .lozio img, #customers .customers .logos .bierfabriek-ams img, #customers .customers .logos .besseling img, #customers .customers .logos .feduzzi img, #customers .customers .logos .bierfabriek-delft img, #customers .customers .logos .konijnenburg img, #customers .customers .logos .gusto img, #customers .customers .logos .repubblica img {
-      display: block;
-      max-width: 96%;
-      padding: 2%; }
+#customers .customers {
+  position: absolute;
+  top: 73px;
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px);
+  overflow: scroll; }
+  #customers .customers .title {
+    padding: 20px 30px; }
+    #customers .customers .title h1 {
+      font-family: satisfy;
+      text-align: right;
+      margin: 0; }
+    #customers .customers .title #some {
+      padding-right: 70px; }
+  #customers .customers .logos {
+    position: relative;
+    padding: 50px 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    background-color: white; }
+    #customers .customers .logos .bacaro, #customers .customers .logos .marhaba, #customers .customers .logos .lozio, #customers .customers .logos .bierfabriek-ams, #customers .customers .logos .besseling, #customers .customers .logos .feduzzi, #customers .customers .logos .bierfabriek-delft, #customers .customers .logos .konijnenburg, #customers .customers .logos .gusto, #customers .customers .logos .repubblica {
+      width: 15vw; }
+      #customers .customers .logos .bacaro img, #customers .customers .logos .marhaba img, #customers .customers .logos .lozio img, #customers .customers .logos .bierfabriek-ams img, #customers .customers .logos .besseling img, #customers .customers .logos .feduzzi img, #customers .customers .logos .bierfabriek-delft img, #customers .customers .logos .konijnenburg img, #customers .customers .logos .gusto img, #customers .customers .logos .repubblica img {
+        display: block;
+        max-width: 96%;
+        padding: 2%; }
 
 #design-portfolio .design-portfolio .design-articles .clipboard-draw, #design-portfolio .design-portfolio .design-articles .cutting-board-draw, #design-portfolio .design-portfolio .design-articles .reserved-draw {
   width: 200px;
@@ -670,30 +694,39 @@ a {
   #design-portfolio .design-portfolio .design-bier-fabriek-2 .info p {
     margin: 1vh 0 0 0; }
 
-#design .design .title h1 {
-  font-family: satisfy;
-  text-align: right;
-  margin: 0;
-  padding: 1em 0.5em 1.5em 0; }
-
-#design .design .description p {
-  padding: 10px;
-  margin-top: 30%;
-  text-align: center;
-  line-height: 1.6; }
+#design .design {
+  position: absolute;
+  top: 73px;
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px); }
+  #design .design .title h1 {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 20px 30px 0 0; }
+  #design .design .description {
+    width: 50%;
+    margin: auto; }
+    @media (max-width: 84.375em) {
+      #design .design .description {
+        width: 70%; } }
+    #design .design .description p {
+      padding: 30px;
+      margin-top: 100px;
+      text-align: center;
+      line-height: 1.6; }
 
 .header {
   position: fixed;
-  background-color: black;
+  display: inline-block;
   z-index: 2;
   top: 0;
-  height: calc(100vh - 164px);
-  width: calc(100vw - 36px);
+  right: 0;
+  height: 64px;
+  width: 100vw;
   margin: 0;
-  transition: height 1s ease-out; }
-  @media (min-width: 769px) {
-    .header {
-      width: 100%; } }
+  transition: height 1.5s ease-in-out; }
   .header .nav ul {
     font-size: 0.75em;
     list-style: none;
@@ -702,102 +735,105 @@ a {
     .header .nav ul li {
       display: inline;
       padding: 0 10px; }
-  @media (min-width: 769px) {
-    .header .company-name {
-      display: none; } }
-  .header .company-name h1 {
-    margin: 0;
-    padding: 9px 0 7px 0;
+  .header .company-name {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    text-align: right;
     text-transform: uppercase;
-    text-align: center;
-    font-size: 1.75em; }
-    @media (max-width: 320px) {
-      .header .company-name h1 {
-        font-size: 1.4em; } }
-    .header .company-name h1 span {
-      color: #D2232A; }
-  .header .large-screen {
-    display: none; }
-    @media (min-width: 769px) {
-      .header .large-screen {
-        display: block;
-        text-align: right;
-        text-transform: uppercase;
-        margin-right: 8px; }
-        .header .large-screen h1 {
-          position: absolute;
-          bottom: 0;
-          right: 8px;
-          margin: 0;
-          padding: 9px 0 7px 0;
-          font-size: 2.5em; }
-          .header .large-screen h1 span {
-            visibility: hidden; } }
+    font-size: 1.3em; }
+    .header .company-name h1 {
+      margin: 0;
+      padding: 0; }
+      .header .company-name h1 span {
+        visibility: hidden; }
+
+#home-page .header {
+  height: calc(100vh - 128px);
+  background-color: black; }
+  #home-page .header .company-name {
+    bottom: 0; }
+
+#home-page .nav {
+  visibility: hidden;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+
+@-webkit-keyframes appear {}
+
+@keyframes appear {}  #home-page .nav 0% {
+    visibility: hidden; }
+  #home-page .nav 100% {
+    visibility: visible; }
+
+.active a {
+  color: white;
+  text-decoration: underline; }
+  .active a:hover {
+    cursor: default; }
 
 #home-page .home-page-content {
-  display: none;
-  position: fixed;
+  position: absolute;
   top: 73px;
-  overflow: scroll;
-  max-width: calc(100vw - 36px);
-  width: 100vw;
-  max-height: calc(100vh - 200px);
-  height: 100vh; }
-  @media (min-width: 769px) {
-    #home-page .home-page-content {
-      left: 82px;
-      max-width: calc(100vw - 210px); } }
-  #home-page .home-page-content .about .title {
-    position: relative;
-    padding: 7vh 0; }
-    #home-page .home-page-content .about .title h2 {
-      display: block;
-      text-align: center;
-      text-transform: uppercase;
-      margin: 0; }
-      #home-page .home-page-content .about .title h2 span {
-        color: #D2232A; }
-      @media (min-width: 426px) and (max-width: 768px) {
-        #home-page .home-page-content .about .title h2 {
-          font-size: 1.7em; } }
-      @media (max-width: 320px) {
-        #home-page .home-page-content .about .title h2 {
-          font-size: 1em; } }
-  @media (min-width: 64em) {
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px); }
+  #home-page .home-page-content .about {
+    height: inherit;
+    width: inherit; }
+    #home-page .home-page-content .about .title {
+      position: relative;
+      padding: 7vh 0; }
+      #home-page .home-page-content .about .title h2 {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0; }
+        #home-page .home-page-content .about .title h2 span {
+          color: #D2232A; }
     #home-page .home-page-content .about .description {
-      padding: 0 20vw; } }
-  #home-page .home-page-content .about .description p {
-    padding: 0.67934783vh 1.20772947vw;
-    line-height: 1.5;
-    text-align: center; }
-    @media (max-width: 320px) {
+      margin: auto;
+      width: 50%; }
+      @media (max-width: 81.5625em) {
+        #home-page .home-page-content .about .description {
+          width: 70%; } }
       #home-page .home-page-content .about .description p {
-        line-height: 1.15; } }
-  #home-page .home-page-content .about .operating-areas {
-    position: relative;
-    margin-top: 9vh; }
-    #home-page .home-page-content .about .operating-areas p {
-      text-align: center;
-      padding: 0.67934783vh 1.20772947vw; }
-    #home-page .home-page-content .about .operating-areas .areas {
-      text-align: center; }
-      #home-page .home-page-content .about .operating-areas .areas ul {
-        padding: 0;
-        margin: 5vh 0;
-        list-style: none; }
-        #home-page .home-page-content .about .operating-areas .areas ul li {
-          margin-top: 2vh; }
-  #home-page .home-page-content .about .we-define-it {
-    position: relative;
-    margin-left: 35vw; }
-  #home-page .home-page-content .about .motto {
-    position: relative;
-    margin-left: 45vw; }
-    #home-page .home-page-content .about .motto p {
-      font-family: satisfy;
-      font-size: 22px; }
-      #home-page .home-page-content .about .motto p span {
-        color: #D2232A; }
+        padding: 0.67934783vh 1.20772947vw;
+        line-height: 1.5;
+        text-align: center; }
+    #home-page .home-page-content .about .operating-areas {
+      margin: auto;
+      width: 30%;
+      position: relative;
+      margin-top: 9vh; }
+      @media (max-width: 81.5625em) {
+        #home-page .home-page-content .about .operating-areas {
+          width: 50%; } }
+      #home-page .home-page-content .about .operating-areas p {
+        text-align: center;
+        padding: 0.67934783vh 1.20772947vw; }
+      #home-page .home-page-content .about .operating-areas .areas {
+        text-align: center; }
+        #home-page .home-page-content .about .operating-areas .areas ul {
+          padding: 0;
+          margin: 5vh 0;
+          list-style: none; }
+          #home-page .home-page-content .about .operating-areas .areas ul li {
+            margin-top: 2vh; }
+    #home-page .home-page-content .about .we-define-it {
+      position: relative; }
+      #home-page .home-page-content .about .we-define-it p {
+        text-align: left; }
+    #home-page .home-page-content .about .motto {
+      position: relative; }
+      #home-page .home-page-content .about .motto p {
+        text-align: right;
+        font-family: satisfy;
+        font-size: 22px; }
+        #home-page .home-page-content .about .motto p span {
+          color: #D2232A; }
 
 #interior-design-portfolio .interior-design-portfolio .interior-design-lozio, #interior-design-portfolio .interior-design-portfolio .interior-design-marhaba, #interior-design-portfolio .interior-design-portfolio .interior-design-private {
   display: none; }
@@ -856,136 +892,139 @@ a {
   top: 40vh;
   width: 30vw; }
 
-#interior-design .interior-design .header {
-  height: 64px; }
-
-#interior-design .interior-design .interior-design {
-  max-width: calc(100vw - 36px);
-  width: 100vw;
-  max-height: calc(100vh - 200px);
-  height: 100vh;
-  top: 64px;
+#interior-design .interior-design {
   position: absolute;
-  background-color: #3D9970; }
-  @media (min-width: 769px) {
-    #interior-design .interior-design .interior-design {
-      left: 82px;
-      max-width: calc(100vw - 210px); } }
-  #interior-design .interior-design .interior-design h1 {
-    font-family: satisfy;
-    text-align: right;
-    margin: 0;
-    padding: 4.34782609vh 3.8647343vw 6.52173913vh 0; }
-    @media (max-width: 320px) {
-      #interior-design .interior-design .interior-design h1 {
-        padding: 4vh 3.8647343vw 2.5vh 0; } }
-  #interior-design .interior-design .interior-design h3 {
+  top: 73px;
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px); }
+  #interior-design .interior-design .title {
+    padding: 20px 30px; }
+    #interior-design .interior-design .title h1 {
+      font-family: satisfy;
+      text-align: right;
+      margin: 0; }
+    #interior-design .interior-design .title #int {
+      padding-right: 70px; }
+  #interior-design .interior-design h3 {
     text-transform: uppercase;
     color: #D2232A;
     padding: 0 0 0 2.41545894vw; }
-    @media (max-width: 320px) {
-      #interior-design .interior-design .interior-design h3 {
-        padding: 0 0 0 2vw; } }
-  #interior-design .interior-design .interior-design p {
+  #interior-design .interior-design p {
     max-width: 1024px;
     padding: 0.67934783vh 1.20772947vw;
     text-align: center; }
-  #interior-design .interior-design .interior-design .project {
+  #interior-design .interior-design .project {
     margin-top: 6.52173913vh; }
-    #interior-design .interior-design .interior-design .project p {
+    #interior-design .interior-design .project p {
       margin-bottom: 0; }
-    #interior-design .interior-design .interior-design .project #WeCanWorkItHout {
+    #interior-design .interior-design .project #WeCanWorkItHout {
       margin-top: 0;
       padding-top: 0;
       text-transform: uppercase; }
-      #interior-design .interior-design .interior-design .project #WeCanWorkItHout span {
+      #interior-design .interior-design .project #WeCanWorkItHout span {
         color: #D2232A; }
-  #interior-design .interior-design .interior-design .realization {
+  #interior-design .interior-design .realization {
     margin-top: 6.52173913vh; }
+  #interior-design .interior-design .analysis, #interior-design .interior-design .realization, #interior-design .interior-design .project {
+    width: 50%;
+    margin: auto; }
+    @media (max-width: 84.375em) {
+      #interior-design .interior-design .analysis, #interior-design .interior-design .realization, #interior-design .interior-design .project {
+        width: 70%; } }
+  #interior-design .interior-design .portfolio {
+    position: absolute;
+    bottom: 20px;
+    left: 50px; }
+    #interior-design .interior-design .portfolio a {
+      font-family: satisfy;
+      font-size: 1.5em;
+      color: white; }
+      #interior-design .interior-design .portfolio a:hover {
+        color: #D2232A; }
 
-#reviews .reviews .reviews-page-1 .title h1 {
-  font-family: satisfy;
-  text-align: right;
-  margin: 0;
-  padding: 1em 0.5em 1.5em 0; }
-
-#reviews .reviews .reviews-page-1 .entree {
-  position: relative;
-  width: 180px;
-  background-color: white; }
-  #reviews .reviews .reviews-page-1 .entree img {
-    display: block;
-    max-width: 96%;
-    padding: 2%; }
-
-#reviews .reviews .reviews-page-1 .bierfabriek-delft {
-  position: relative;
-  width: 180px;
-  background-color: white; }
-  #reviews .reviews .reviews-page-1 .bierfabriek-delft img {
-    display: block;
-    max-width: 96%;
-    padding: 2%; }
-
-#reviews .reviews .reviews-page-1 .info {
+#reviews .reviews {
   position: absolute;
-  bottom: 0;
-  padding-bottom: 0.67934783vh;
-  text-align: center;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0); }
-  #reviews .reviews .reviews-page-1 .info p {
-    margin: 1vh 0 0 0; }
-
-#reviews .reviews .reviews-page-2 .giuseppe {
-  position: relative;
-  width: 180px;
-  background-color: white; }
-  #reviews .reviews .reviews-page-2 .giuseppe img {
-    display: block;
-    max-width: 96%;
-    padding: 2%; }
-
-#reviews .reviews .reviews-page-2 .genius {
-  position: relative;
-  width: 180px;
-  background-color: white; }
-  #reviews .reviews .reviews-page-2 .genius img {
-    display: block;
-    max-width: 96%;
-    padding: 2%; }
-
-#reviews .reviews .reviews-page-2 .info {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 0.67934783vh;
-  text-align: center;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0); }
-  #reviews .reviews .reviews-page-2 .info p {
-    margin: 1vh 0 0 0; }
+  top: 73px;
+  left: 82px;
+  width: calc(100vw - 210px);
+  height: calc(100vh - 199px); }
+  #reviews .reviews .reviews-page-1 .title h1 {
+    font-family: satisfy;
+    text-align: right;
+    margin: 0;
+    padding: 20px 30px 0 0; }
+  #reviews .reviews .reviews-page-1 .entree {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    #reviews .reviews .reviews-page-1 .entree img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  #reviews .reviews .reviews-page-1 .bierfabriek-delft {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    #reviews .reviews .reviews-page-1 .bierfabriek-delft img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  #reviews .reviews .reviews-page-1 .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    #reviews .reviews .reviews-page-1 .info p {
+      margin: 1vh 0 0 0; }
+  #reviews .reviews .reviews-page-2 .giuseppe {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    #reviews .reviews .reviews-page-2 .giuseppe img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  #reviews .reviews .reviews-page-2 .genius {
+    position: relative;
+    width: 180px;
+    background-color: white; }
+    #reviews .reviews .reviews-page-2 .genius img {
+      display: block;
+      max-width: 96%;
+      padding: 2%; }
+  #reviews .reviews .reviews-page-2 .info {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 0.67934783vh;
+    text-align: center;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+    #reviews .reviews .reviews-page-2 .info p {
+      margin: 1vh 0 0 0; }
 
 .stripes .top-stripe {
+  position: fixed;
+  top: 64px;
+  right: 0;
   z-index: 3;
   height: 9px;
   width: calc(100vw - 73px);
-  background-color: #D2232A;
-  position: fixed;
-  top: 64px;
-  right: 0; }
+  background-color: #D2232A; }
 
 .stripes .right-stripe {
+  position: fixed;
+  top: 0;
   z-index: 3;
+  position: fixed;
+  right: 96px;
   width: 32px;
   height: calc(100vh - 96px);
-  background-color: #D2232A;
-  position: fixed;
-  right: 0; }
-  @media (min-width: 769px) {
-    .stripes .right-stripe {
-      right: 96px; } }
+  background-color: #D2232A; }
   .stripes .right-stripe .menu-wrap {
     display: none;
     height: 36px;
@@ -993,59 +1032,14 @@ a {
     .stripes .right-stripe .menu-wrap .material-icons {
       font-size: 175%;
       text-align: center; }
-
-@-webkit-keyframes wiggle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  80% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  85% {
-    -webkit-transform: rotate(8deg);
-            transform: rotate(8deg); }
-  95% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg); }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
-
-@keyframes wiggle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  80% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  85% {
-    -webkit-transform: rotate(8deg);
-            transform: rotate(8deg); }
-  95% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg); }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); } }
   .stripes .right-stripe .drop-letter {
     position: absolute;
     width: 32px;
     height: 36px; }
-    @media (max-width: 320px) {
-      .stripes .right-stripe .drop-letter {
-        display: none; } }
-    @media (min-width: 321px) and (max-width: 425px) {
-      .stripes .right-stripe .drop-letter {
-        display: none; } }
-    @media (min-width: 426px) and (max-width: 768px) {
-      .stripes .right-stripe .drop-letter {
-        display: none; } }
     .stripes .right-stripe .drop-letter b {
       transition: margin 1s ease-out;
-      -webkit-animation: wiggle 1s infinite;
-              animation: wiggle 1s infinite;
       display: block;
-      margin-top: calc(100vh - 217px);
+      margin-top: 16px;
       font-size: 2.5em;
       text-transform: uppercase;
       text-align: center;
@@ -1060,12 +1054,9 @@ a {
   z-index: 3;
   position: fixed;
   bottom: 96px;
-  width: 100%;
+  width: calc(100vw - 96px);
   height: 30px;
   background-color: #D2232A; }
-  @media (min-width: 769px) {
-    .stripes .bottom-stripe {
-      width: calc(100% - 96px); } }
   .stripes .bottom-stripe .motto {
     font-family: satisfy;
     font-size: 22px; }
@@ -1084,12 +1075,3 @@ a {
   position: fixed;
   left: 73px;
   bottom: 0; }
-  @media (max-width: 320px) {
-    .stripes .left-stripe {
-      display: none; } }
-  @media (min-width: 321px) and (max-width: 425px) {
-    .stripes .left-stripe {
-      display: none; } }
-  @media (min-width: 426px) and (max-width: 768px) {
-    .stripes .left-stripe {
-      display: none; } }

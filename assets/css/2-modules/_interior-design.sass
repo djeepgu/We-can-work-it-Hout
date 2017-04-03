@@ -1,50 +1,58 @@
 #interior-design
-  .interior-design  
-    .header
-      height: 64px
-
-    .interior-design
-      max-width: calc(100vw - 36px)
-      width: 100vw
-      max-height: calc(100vh - 200px)
-      height: 100vh
-      @include bp(larger)
-        left: 82px
-        max-width: calc(100vw - 210px)
-      top: 64px
-      position: absolute
-      background-color: $olive
-      //padding: 0 20vw
+  .interior-design
+    position: absolute
+    top: 73px
+    left: 82px
+    width: calc(100vw - 210px)
+    height: calc(100vh - 199px)
+    //background-color: $olive
+    .title
+      padding: 20px 30px
       h1
         font-family: satisfy
         text-align: right
         margin: 0
-        padding: 4.34782609vh 3.8647343vw 6.52173913vh 0
-        @include bp(small)
-          padding: 4vh 3.8647343vw 2.5vh 0
-      h3
-        text-transform: uppercase
-        color: $houtRed
-        padding: 0 0 0 2.41545894vw
-        @include bp(small)
-          padding: 0 0 0 2vw
+      #int
+          padding-right: 70px
+      #des
+
+    h3
+      text-transform: uppercase
+      color: $houtRed
+      padding: 0 0 0 2.41545894vw
+
+    p
+      max-width: 1024px
+      padding: 0.67934783vh 1.20772947vw
+      text-align: center
+
+    .project
+      margin-top: 6.52173913vh
       p
-        max-width: 1024px
-        padding: 0.67934783vh 1.20772947vw
-        text-align: center
+        margin-bottom: 0
+      #WeCanWorkItHout
+        margin-top: 0
+        padding-top: 0
+        text-transform: uppercase
+        span
+          color: $houtRed
 
-      .analysis
+    .realization
+      margin-top: 6.52173913vh
 
-      .project
-        margin-top: 6.52173913vh
-        p
-          margin-bottom: 0
-        #WeCanWorkItHout
-          margin-top: 0
-          padding-top: 0
-          text-transform: uppercase
-          span
-            color: $houtRed
+    .analysis, .realization, .project
+      width: 50%
+      margin: auto
+      @include maxw(1350)
+        width: 70%
 
-      .realization
-        margin-top: 6.52173913vh
+    .portfolio
+      position: absolute
+      bottom: 20px
+      left: 50px
+      a
+        font-family: satisfy
+        font-size: 1.5em
+        color: white
+        &:hover
+          color: $houtRed
