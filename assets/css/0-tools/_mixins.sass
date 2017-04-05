@@ -60,3 +60,33 @@
   display: block
   max-width: 96%
   padding: 2%
+
+@mixin sidebar-nav
+  .stripes
+    .right-stripe
+      .up-down-nav
+        display: block
+        position: absolute
+        bottom: 30px
+        .material-icons
+          font-size: 2em
+          cursor: pointer
+
+@mixin container
+  position: absolute
+  top: 73px
+  left: 82px
+  width: calc(100vw - 210px)
+  height: calc(100vh - 199px)
+
+@mixin portfolio-button
+  .portfolio
+    position: absolute
+    bottom: 20px
+    left: 50px
+    a
+      font-family: satisfy
+      font-size: 1.5em
+      color: white
+      &:hover
+        color: $houtRed

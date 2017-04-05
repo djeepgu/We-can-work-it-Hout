@@ -1,24 +1,24 @@
 #contact
   .contact
-    position: absolute
-    top: 73px
-    left: 82px
-    width: calc(100vw - 210px)
-    height: calc(100vh - 199px)
-    //background-color: $yellow
-    h2
-      color: $houtRed
-    p, a
-      color: white
-    h2,p,a
+    @include container
+    display: flex
+    flex-direction: column
+    align-items: center
+    .location, .mail, .phone
       text-align: center
-    a
-      display: block
     .location
-      position: relative
-      padding-top: 10vh
-      h2
-        margin: 0
+      p
+        font-size: 2.3em
+        margin-bottom: 10px
+
+    .mail
+
+    .phone
+      .carli
+        margin-top: 20%
+      .cipressi
+        margin-top: 20%
+
 
     .brochure
       position: absolute

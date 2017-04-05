@@ -1,10 +1,12 @@
 #reviews
-  .reviews
-    position: absolute
-    top: 73px
-    left: 82px
-    width: calc(100vw - 210px)
-    height: calc(100vh - 199px)
+  .portfolio
+    @include container
+    overflow: scroll
+    .reviews-page-1, .reviews-page-2
+      position: relative
+      width: inherit
+      height: inherit
+      border-bottom: 1px solid $houtRed
     .reviews-page-1
       //background-color: $blue
       .title
@@ -14,15 +16,19 @@
           margin: 0
           padding: 20px 30px 0 0
       .entree
-        position: relative
-        width: 180px
+        position: absolute
+        top: 25%
+        right: 4%
+        width: 380px
         background-color: white
         img
           @include image-border
 
       .bierfabriek-delft
-        position: relative
-        width: 180px
+        position: absolute
+        top: 4%
+        left: 4%
+        width: 500px
         background-color: white
         img
           @include image-border
@@ -33,16 +39,22 @@
     .reviews-page-2
       //background-color: $teal
       .giuseppe
-        position: relative
-        width: 180px
+        position: absolute
+        right: 2%
+        top: 4%
+        width: 270px
         background-color: white
         img
           @include image-border
       .genius
-        position: relative
-        width: 180px
+        position: absolute
+        top: 2%
+        left: 1%
+        width: 530px
         background-color: white
         img
           @include image-border
       .info
         @include bottom-info
+
+  @include sidebar-nav

@@ -1,55 +1,69 @@
 #interior-design-portfolio
-  .interior-design-portfolio
-    .interior-design-lozio, .interior-design-marhaba, .interior-design-private
-      display: none
-      //background-color: $navy
-      .lozio-img-1, .marhaba-img-1, .private-img-1
-        position: absolute
-        top: 0.67934783vh
-        left: 1.20772947vw
-        background-color: white
-        width: 38.647343vw
-        max-width: 250px
-        img
-          @include image-border
-      .lozio-img-2, .marhaba-img-2, .private-img-2
-        position: absolute
-        width: 60.3864734vw
-        max-width: 450px
-        top: 19.701087vh
-        right: 1.20772947vw
-        background-color: white
-
-        img
-          @include image-border
-      .lozio-img-3, .marhaba-img-3, .private-img-3
-        position: absolute
-        top: 50.951087vh
-        left: 1.20772947vw
-        background-color: white
-        width: 38.647343vw
-        max-width: 250px
-        img
-          @include image-border
+  .portfolio
+    @include container
+    overflow: scroll
+    .lozio, .marhaba, .private
+      position: relative
+      width: inherit
+      height: inherit
+      border-bottom: 1px solid $houtRed
       .lozio-info, .marhaba-info, .private-info
         @include bottom-info
+      .lozio-img-1, .lozio-img-2, .lozio-img-3, .marhaba-img-1, .marhaba-img-2, .marhaba-img-3, .private-img-1, .private-img-2, .private-img-3
+        position: absolute
+        background-color: white
+        img
+          @include image-border
 
-    .interior-design-marhaba
+    .lozio
+      .lozio-img-1
+        top: 40px
+        left: 150px
+        width: 28%
+      .lozio-img-2
+        top: 18%
+        right: 20px
+        width: 40%
+        max-width: 500px
+      .lozio-img-3
+        left: 20px
+        bottom: 20px
+        width: 29%
 
+    .marhaba
+      .marhaba-img-1
+        top: 40px
+        left: 100px
+        width: 29%
       .marhaba-img-2
-
+        top: 18%
+        right: 20px
+        width: 46%
       .marhaba-img-3
+        left: 20px
+        bottom: 20px
+        width: 31%
 
-      .marhaba-info
-
-    .interior-design-private
-
+    .private
       .private-img-1
-        width: 30vw
+        top: 5%
+        left: 400px
+        width: 20%
       .private-img-2
-        top: 15vh
-        width: 55vw
+        top: 5%
+        right: 20px
+        width: 35%
       .private-img-3
-        top: 40vh
-        width: 30vw
-      .private-info
+        left: 20px
+        top: 5%
+        width: 29.4%
+
+  .stripes
+    .right-stripe
+      .up-down-nav
+        display: block
+        position: absolute
+        bottom: 30px
+        .material-icons
+          font-size: 2em
+          cursor: pointer

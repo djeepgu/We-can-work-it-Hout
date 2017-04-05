@@ -1,27 +1,30 @@
 #art-graphic-portfolio
-  .art-graphic-portfolio
+  .portfolio
+    @include container
+    overflow: scroll
+    .art-bier-fabriek-delft, .art-bier-fabriek-amsterdam
+      position: relative
+      width: inherit
+      height: inherit
+      border-bottom: 1px solid $houtRed
     .art-bier-fabriek-delft
-      //background-color: $purple
-      .delft-art-1, .delft-art-2, .delft-art-3
-        display: inline-block
-        position: relative
-        width: 119px
-        margin-left: 5px
-        top: 5px
-        background-color: white
+      .tiles
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        .delft-art-1, .delft-art-2, .delft-art-3
+          margin: 2% 2% 0 2%
+          width: 175px
+          background-color: white
         img
           @include image-border
 
-      .delft-art-2
-        top: 50px
-
-      .delft-art-3
-        top: 100px
-
       .delft-art-4
-        top: 140px
+        top: 30px
         position: relative
-        width: 350px
+        width: 450px
         background-color: white
         margin: 0 auto
         img
@@ -33,20 +36,22 @@
     .art-bier-fabriek-amsterdam
       //background-color: $purple
       .amsterdam-art-1
-        position: relative
-        width: 175px
-        margin-left: 5px
-        top: 5px
+        position: absolute
+        width: 275px
+        left: 4%
+        top: 4%
         background-color: white
         img
           @include image-border
       .amsterdam-art-2
-        position: relative
-        width: 300px
-        margin: 0 auto
-        top: 5px
+        position: absolute
+        width: 500px
+        top: 4%
+        right: 4%
         background-color: white
         img
           @include image-border
       .info
         @include bottom-info
+
+  @include sidebar-nav

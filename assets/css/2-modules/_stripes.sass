@@ -24,24 +24,26 @@
       .material-icons
         font-size: 175%
         text-align: center
-
     .drop-letter
+      transition: height 1.5s ease-in-out
       position: absolute
       width: 32px
-      height: 36px
+      height: calc(100vh - 128px)
+      top: 0
       b
-        transition: margin 1s ease-out
+
         display: block
-        margin-top: 16px
+        position: absolute
+        left: 1px
+        bottom: 0
         font-size: 2.5em
         text-transform: uppercase
         text-align: center
         color: black
         @include stroke(2, white)
-        &:hover
-          cursor: pointer
-          animation: none
 
+    .up-down-nav
+      display: none
   .bottom-stripe
     z-index: 3
     position: fixed

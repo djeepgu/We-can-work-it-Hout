@@ -1,81 +1,65 @@
 #design-portfolio
-  .design-portfolio
+  .portfolio
+    @include container
+    overflow: scroll
+    .design-articles, .design-bier-fabriek-1, .design-bier-fabriek-2
+      position: relative
+      width: inherit
+      height: inherit
+      border-bottom: 1px solid $houtRed
     .design-articles
-      //background-color: blue
+      margin-top: 3%
+      .draw-container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        .clipboard-draw, .cutting-board-draw, .reserved-draw
+          padding: 2%
+          width: 25%
+          img
+            max-width: 100%
 
-      .clipboard-draw, .cutting-board-draw, .reserved-draw
-        width: 200px
-        padding: 5px
-        img
-          max-width: 100%
-
-      .clipboard-draw
-
-      .reserved-draw
-        img
-          margin-left: 33%
-
-      .cutting-board-draw
-        img
-          margin-left: 80%
-
-
-      .clipboard-pic
-        position: relative
-        top: 10px
-        left: 5px
-        background-color: white
-        width: 200px
-        img
-          @include image-border
-      .reserved-pic
-        position: relative
-        top: 20px
-        left: 50px
-        background-color: white
-        width: 200px
-        img
-          @include image-border
-      .cutting-board-pic
-        position: relative
-        top: 30px
-        left: 163px
-        background-color: white
-        width: 200px
-        img
-          @include image-border
+      .pic-container
+        margin-top: 12%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        .clipboard-pic, .reserved-pic, .cutting-board-pic
+          background-color: white
+          margin: 2%
+          max-width: 25%
+          img
+            @include image-border
 
     .design-bier-fabriek-1
-      //background-color: $aqua
+      .bacheca-draw, .barrel-draw, .barrel-pic, .bacheca-pic
+        position: absolute
+        img
+          max-width: 100%
       .bacheca-draw
-        position: relative
-        margin-left: 15px
-        top: 15px
-        width: 90px
-        img
-          max-width: 100%
-
+        top: 5%
+        left: 57%
+        width: 15%
       .barrel-draw
-        margin-top: -190px
-        margin-left: 50%
-        width: 170px
-        img
-          padding: 5px
-          max-width: 100%
-
+        top: 25%
+        left: 39%
+        width: 15%
       .barrel-pic
+        top: 5%
+        left: 5%
+        width: 30%
         background-color: white
-        width: 160px
-        margin-left: 15px
-        margin-top: 40px
         img
           @include image-border
       .bacheca-pic
-        margin-left: auto
-        margin-right: 15px
-        margin-top: -270px
+        right: 5%
+        top: 5%
+        width: 20%
         background-color: white
-        width: 130px
         img
           @include image-border
 
@@ -85,12 +69,14 @@
     .design-bier-fabriek-2
       //background-color: $gray
       .photo
-        position: relative
+        position: absolute
         width: 270px
-        margin-left: 52px
+        margin-left: 38%
         top: 5px
         background-color: white
         img
           @include image-border
       .info
         @include bottom-info
+
+  @include sidebar-nav

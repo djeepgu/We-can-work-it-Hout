@@ -1,10 +1,6 @@
 #interior-design
   .interior-design
-    position: absolute
-    top: 73px
-    left: 82px
-    width: calc(100vw - 210px)
-    height: calc(100vh - 199px)
+    @include container
     //background-color: $olive
     .title
       padding: 20px 30px
@@ -46,13 +42,4 @@
       @include maxw(1350)
         width: 70%
 
-    .portfolio
-      position: absolute
-      bottom: 20px
-      left: 50px
-      a
-        font-family: satisfy
-        font-size: 1.5em
-        color: white
-        &:hover
-          color: $houtRed
+    @include portfolio-button
