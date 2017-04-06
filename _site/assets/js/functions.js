@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-
+  $("#home-page .nav").hide()
   // AUTOMATIC COMPANY NAME SLIDE UP
   setTimeout( function() {
     // RESIZE HEIGHT OF HEADER
@@ -9,26 +9,17 @@ $( document ).ready(function() {
 
     // AFTER NAME SLIDES UP SHOW NAVIGATION BAR
   setTimeout( function() {
-
-    $("#home-page .nav").css('visibility', 'visible')
-
-  }, 5000);
+    $("#home-page .nav").fadeIn();
+  }, 4500);
 
     // NAVIGATION ACTIVE STATE
-      // TAKE INDEX OF THE ACTIVE MENU
-  //var activeMenu = $(".nav .active").index();
-      // CHECK WHICH MENU HAS BEEN CLICKED
-  $(".nav ul li").on("click", function() {
-    var clickedMenu = $(this).index();
-    // REMOVE active CLASS FROM activeMenu
-    $(this).removeClass("active");
-    // ADD active CLASS TO THE CLICKED MENU
-    $(":nth-child("+clickedMenu+")", this).addClass("active");
-    //alert(clickedMenu);
-    //alert(activeMenu);
-    //alert("test");
-  });
 
+  var path = window.location.href;
+  $(".nav a").each(function() {
+    if (this.href === path) {
+      $(this).addClass('active');
+    }
+  });
 
   // SIDEBAR UP/DOWN NAVIGATION
 

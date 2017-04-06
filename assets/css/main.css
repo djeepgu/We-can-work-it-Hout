@@ -779,6 +779,10 @@ a {
     .header .nav ul li {
       display: inline;
       padding: 0 10px; }
+    .header .nav ul .active {
+      color: white; }
+      .header .nav ul .active:hover {
+        cursor: default; }
   .header .company-name {
     position: absolute;
     bottom: 0;
@@ -799,24 +803,7 @@ a {
     bottom: 0; }
 
 #home-page .nav {
-  visibility: hidden;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s; }
-
-@-webkit-keyframes appear {}
-
-@keyframes appear {}  #home-page .nav 0% {
-    visibility: hidden; }
-  #home-page .nav 100% {
-    visibility: visible; }
-
-.active a {
-  color: white;
-  text-decoration: underline; }
-  .active a:hover {
-    cursor: default; }
+  z-index: 1; }
 
 #home-page .home-page-content {
   position: absolute;
@@ -1120,7 +1107,7 @@ a {
     transition: height 1.5s ease-in-out;
     position: absolute;
     width: 32px;
-    height: calc(100vh - 128px);
+    height: 64px;
     top: 0; }
     .stripes .right-stripe .drop-letter b {
       display: block;
@@ -1160,3 +1147,6 @@ a {
   position: fixed;
   left: 73px;
   bottom: 0; }
+
+#home-page .stripes .drop-letter {
+  height: calc(100vh - 128px); }

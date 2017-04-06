@@ -19,6 +19,11 @@
       li
         display: inline
         padding: 0 10px
+      .active
+        color: white
+        //text-decoration: underline
+        &:hover
+          cursor: default
 
 
   .company-name
@@ -42,20 +47,4 @@
       bottom: 0
 
   .nav
-    visibility: hidden
-    @keyframes appear
-    0%
-      visibility: hidden
-
-    100%
-      visibility: visible
-    animation-name: appear
-    animation-duration: 1s
-
-
-.active
-  a
-    color: white
-    text-decoration: underline
-    &:hover
-      cursor: default
+      z-index: 1
