@@ -12,7 +12,7 @@
 
   .nav
     ul
-      font-size: 0.75em
+      font-size: 0.9em
       list-style: none
       margin-top: 46px
       padding: 0 64px
@@ -21,9 +21,28 @@
         padding: 0 10px
       .active
         color: white
-        //text-decoration: underline
         &:hover
           cursor: default
+    @include maxw(1279)
+      ul
+        font-size: 0.7em
+        margin-top: 78px
+        margin-left: calc(100vw - 93px)
+        width: 90px
+        padding: 0
+        li
+          text-align: center
+          background-color: $houtRed
+          border-radius: 4px
+          display: grid
+          padding: 10px 0
+          margin: 2px
+          a
+            color: black
+        .active
+          color: white
+          &:hover
+            cursor: default
 
 
   .company-name

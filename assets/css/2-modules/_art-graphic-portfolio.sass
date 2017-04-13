@@ -13,10 +13,12 @@
         flex-direction: row
         flex-wrap: wrap
         align-items: center
-        justify-content: space-between
+        justify-content: space-around
+
         .delft-art-1, .delft-art-2, .delft-art-3
-          margin: 2% 2% 0 2%
-          width: 175px
+          margin-top: 20px
+          width: 16%
+          max-width: 270px
           background-color: white
         img
           @include image-border
@@ -24,7 +26,8 @@
       .delft-art-4
         top: 30px
         position: relative
-        width: 450px
+        width: 35%
+        max-width: 600px
         background-color: white
         margin: 0 auto
         img
@@ -37,20 +40,24 @@
       //background-color: $purple
       .amsterdam-art-1
         position: absolute
-        width: 275px
-        left: 4%
-        top: 4%
+        width: 25%
+        max-width: 417px
+        left: 20px
+        top: 20px
         background-color: white
         img
           @include image-border
       .amsterdam-art-2
         position: absolute
-        width: 500px
-        top: 4%
-        right: 4%
+        width: 60%
+        max-width: 960px
+        top: 20px
+        right: 20px
         background-color: white
         img
           @include image-border
+          max-width: 98%
+          padding: 1%
       .info
         @include bottom-info
 

@@ -1,10 +1,6 @@
 #home-page
   .home-page-content
-    position: absolute
-    top: 73px
-    left: 82px
-    width: calc(100vw - 210px)
-    height: calc(100vh - 199px)
+    @include container
 
     .about
       height: inherit
@@ -12,8 +8,9 @@
       //background-color: $teal
       .title
         position: relative
-        //background-color: green
         padding: 7vh 0
+        @include maxw(1279)
+          padding: 5vh 0 3vh 0
         h2
           display: block
           text-align: center
@@ -24,32 +21,34 @@
       .description
         //background-color: green
         margin: auto
-        width: 50%
-        @include maxw(1305)
-          width: 70%
-
+        width: 60%
+        @include maxw(1400)
+          width: 75%
         p
-          padding: 0.67934783vh 1.20772947vw
+          padding: 0.3vh 1.2vw
           line-height: 1.5
           text-align: center
+          @include maxw(1279)
+            padding: 0.3vh 1.2vw
       .operating-areas
         margin: auto
         width: 30%
-        @include maxw(1305)
-          width: 50%
-        
-        //background-color: $teal
         position: relative
-        margin-top: 9vh
+        margin-top: 6.5vh
+        @include maxw(1400)
+          width: 40%
+          margin-top: 3.5vh
         p
           text-align: center
-          padding: 0.67934783vh 1.20772947vw
+          padding: 0.3vh 1.2vw
+          @include maxw(1280)
+            padding: 0.3vh 1.2vw
         .areas
           //background-color: green
           text-align: center
           ul
             padding: 0
-            margin: 5vh 0
+            margin: 4vh 0
             list-style: none
             li
               margin-top: 2vh

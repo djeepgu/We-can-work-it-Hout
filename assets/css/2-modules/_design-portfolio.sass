@@ -8,31 +8,41 @@
       height: inherit
       border-bottom: 1px solid $houtRed
     .design-articles
-      margin-top: 3%
       .draw-container
+        position: absolute
+        width: 50%
+        height: 100%
+        //margin-top: 3%
         display: flex
-        flex-direction: row
+        flex-direction: column
         flex-wrap: wrap
         align-items: center
-        justify-content: space-between
+        justify-content: space-around
         .clipboard-draw, .cutting-board-draw, .reserved-draw
           padding: 2%
-          width: 25%
+          width: 65%
+          max-width: 400px
           img
             max-width: 100%
 
       .pic-container
-        margin-top: 12%
+        position: absolute
+        margin-top: 0
+        left: 50%
+        width: 50%
+        height: 100%
         display: flex
-        flex-direction: row
+        flex-direction: column
         flex-wrap: wrap
         align-items: center
-        justify-content: space-between
+        justify-content: space-around
         .clipboard-pic, .reserved-pic, .cutting-board-pic
           background-color: white
           margin: 2%
-          max-width: 25%
+          width: 65%
+          max-width: 400px
           img
+            max-width: 100%
             @include image-border
 
     .design-bier-fabriek-1
@@ -41,23 +51,23 @@
         img
           max-width: 100%
       .bacheca-draw
-        top: 5%
+        top: 20px
         left: 57%
-        width: 15%
+        width: 18%
       .barrel-draw
-        top: 25%
-        left: 39%
+        top: 32%
+        left: 36%
         width: 15%
       .barrel-pic
-        top: 5%
-        left: 5%
+        top: 20px
+        left: 20px
         width: 30%
         background-color: white
         img
           @include image-border
       .bacheca-pic
-        right: 5%
-        top: 5%
+        right: 20px
+        top: 20px
         width: 20%
         background-color: white
         img

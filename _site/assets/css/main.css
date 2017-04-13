@@ -426,6 +426,8 @@ a {
   width: calc(100vw - 210px);
   height: calc(100vh - 199px);
   overflow: scroll; }
+  #art-graphic-portfolio .portfolio::-webkit-scrollbar {
+    display: none; }
   #art-graphic-portfolio .portfolio .art-bier-fabriek-delft, #art-graphic-portfolio .portfolio .art-bier-fabriek-amsterdam {
     position: relative;
     width: inherit;
@@ -440,11 +442,12 @@ a {
         flex-wrap: wrap;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
     #art-graphic-portfolio .portfolio .art-bier-fabriek-delft .tiles .delft-art-1, #art-graphic-portfolio .portfolio .art-bier-fabriek-delft .tiles .delft-art-2, #art-graphic-portfolio .portfolio .art-bier-fabriek-delft .tiles .delft-art-3 {
-      margin: 2% 2% 0 2%;
-      width: 175px;
+      margin-top: 20px;
+      width: 16%;
+      max-width: 270px;
       background-color: white; }
     #art-graphic-portfolio .portfolio .art-bier-fabriek-delft .tiles img {
       display: block;
@@ -453,7 +456,8 @@ a {
   #art-graphic-portfolio .portfolio .art-bier-fabriek-delft .delft-art-4 {
     top: 30px;
     position: relative;
-    width: 450px;
+    width: 35%;
+    max-width: 600px;
     background-color: white;
     margin: 0 auto; }
     #art-graphic-portfolio .portfolio .art-bier-fabriek-delft .delft-art-4 img {
@@ -472,9 +476,10 @@ a {
       margin: 1vh 0 0 0; }
   #art-graphic-portfolio .portfolio .art-bier-fabriek-amsterdam .amsterdam-art-1 {
     position: absolute;
-    width: 275px;
-    left: 4%;
-    top: 4%;
+    width: 25%;
+    max-width: 417px;
+    left: 20px;
+    top: 20px;
     background-color: white; }
     #art-graphic-portfolio .portfolio .art-bier-fabriek-amsterdam .amsterdam-art-1 img {
       display: block;
@@ -482,14 +487,17 @@ a {
       padding: 2%; }
   #art-graphic-portfolio .portfolio .art-bier-fabriek-amsterdam .amsterdam-art-2 {
     position: absolute;
-    width: 500px;
-    top: 4%;
-    right: 4%;
+    width: 60%;
+    max-width: 960px;
+    top: 20px;
+    right: 20px;
     background-color: white; }
     #art-graphic-portfolio .portfolio .art-bier-fabriek-amsterdam .amsterdam-art-2 img {
       display: block;
       max-width: 96%;
-      padding: 2%; }
+      padding: 2%;
+      max-width: 98%;
+      padding: 1%; }
   #art-graphic-portfolio .portfolio .art-bier-fabriek-amsterdam .info {
     position: absolute;
     bottom: 0;
@@ -516,11 +524,14 @@ a {
   width: calc(100vw - 210px);
   height: calc(100vh - 199px); }
   #art-graphic .art-graphic .title {
-    padding: 20px 30px; }
+    padding: 20px 30px 0 0; }
     #art-graphic .art-graphic .title h1 {
       font-family: satisfy;
       text-align: right;
       margin: 0; }
+    @media (max-width: 84.375em) {
+      #art-graphic .art-graphic .title {
+        padding: 20px 30px 0 0; } }
     #art-graphic .art-graphic .title #art {
       padding-right: 70px; }
   #art-graphic .art-graphic .description {
@@ -557,6 +568,8 @@ a {
       flex-direction: column;
   -ms-flex-align: center;
       align-items: center; }
+  #contact .contact::-webkit-scrollbar {
+    display: none; }
   #contact .contact .location, #contact .contact .mail, #contact .contact .phone {
     text-align: center; }
   #contact .contact .location p {
@@ -580,16 +593,19 @@ a {
   height: calc(100vh - 199px);
   overflow: scroll; }
   #customers .customers .title {
-    padding: 20px 30px; }
+    padding: 20px 30px 0 0; }
     #customers .customers .title h1 {
       font-family: satisfy;
       text-align: right;
       margin: 0; }
+    @media (max-width: 84.375em) {
+      #customers .customers .title {
+        padding: 20px 30px 0 0; } }
     #customers .customers .title #some {
       padding-right: 70px; }
   #customers .customers .logos {
     position: relative;
-    padding: 50px 0;
+    margin: 50px 0;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -598,11 +614,12 @@ a {
         flex-wrap: wrap;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     background-color: white; }
     #customers .customers .logos .bacaro, #customers .customers .logos .marhaba, #customers .customers .logos .lozio, #customers .customers .logos .bierfabriek-ams, #customers .customers .logos .besseling, #customers .customers .logos .feduzzi, #customers .customers .logos .bierfabriek-delft, #customers .customers .logos .konijnenburg, #customers .customers .logos .gusto, #customers .customers .logos .repubblica {
-      width: 15vw; }
+      width: 17%;
+      max-width: 200px; }
       #customers .customers .logos .bacaro img, #customers .customers .logos .marhaba img, #customers .customers .logos .lozio img, #customers .customers .logos .bierfabriek-ams img, #customers .customers .logos .besseling img, #customers .customers .logos .feduzzi img, #customers .customers .logos .bierfabriek-delft img, #customers .customers .logos .konijnenburg img, #customers .customers .logos .gusto img, #customers .customers .logos .repubblica img {
         display: block;
         max-width: 96%;
@@ -615,64 +632,74 @@ a {
   width: calc(100vw - 210px);
   height: calc(100vh - 199px);
   overflow: scroll; }
+  #design-portfolio .portfolio::-webkit-scrollbar {
+    display: none; }
   #design-portfolio .portfolio .design-articles, #design-portfolio .portfolio .design-bier-fabriek-1, #design-portfolio .portfolio .design-bier-fabriek-2 {
     position: relative;
     width: inherit;
     height: inherit;
     border-bottom: 1px solid #D2232A; }
-  #design-portfolio .portfolio .design-articles {
-    margin-top: 3%; }
-    #design-portfolio .portfolio .design-articles .draw-container {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      #design-portfolio .portfolio .design-articles .draw-container .clipboard-draw, #design-portfolio .portfolio .design-articles .draw-container .cutting-board-draw, #design-portfolio .portfolio .design-articles .draw-container .reserved-draw {
-        padding: 2%;
-        width: 25%; }
-        #design-portfolio .portfolio .design-articles .draw-container .clipboard-draw img, #design-portfolio .portfolio .design-articles .draw-container .cutting-board-draw img, #design-portfolio .portfolio .design-articles .draw-container .reserved-draw img {
-          max-width: 100%; }
-    #design-portfolio .portfolio .design-articles .pic-container {
-      margin-top: 12%;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-direction: row;
-          flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      #design-portfolio .portfolio .design-articles .pic-container .clipboard-pic, #design-portfolio .portfolio .design-articles .pic-container .reserved-pic, #design-portfolio .portfolio .design-articles .pic-container .cutting-board-pic {
-        background-color: white;
-        margin: 2%;
-        max-width: 25%; }
-        #design-portfolio .portfolio .design-articles .pic-container .clipboard-pic img, #design-portfolio .portfolio .design-articles .pic-container .reserved-pic img, #design-portfolio .portfolio .design-articles .pic-container .cutting-board-pic img {
-          display: block;
-          max-width: 96%;
-          padding: 2%; }
+  #design-portfolio .portfolio .design-articles .draw-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    #design-portfolio .portfolio .design-articles .draw-container .clipboard-draw, #design-portfolio .portfolio .design-articles .draw-container .cutting-board-draw, #design-portfolio .portfolio .design-articles .draw-container .reserved-draw {
+      padding: 2%;
+      width: 65%;
+      max-width: 400px; }
+      #design-portfolio .portfolio .design-articles .draw-container .clipboard-draw img, #design-portfolio .portfolio .design-articles .draw-container .cutting-board-draw img, #design-portfolio .portfolio .design-articles .draw-container .reserved-draw img {
+        max-width: 100%; }
+  #design-portfolio .portfolio .design-articles .pic-container {
+    position: absolute;
+    margin-top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    #design-portfolio .portfolio .design-articles .pic-container .clipboard-pic, #design-portfolio .portfolio .design-articles .pic-container .reserved-pic, #design-portfolio .portfolio .design-articles .pic-container .cutting-board-pic {
+      background-color: white;
+      margin: 2%;
+      width: 65%;
+      max-width: 400px; }
+      #design-portfolio .portfolio .design-articles .pic-container .clipboard-pic img, #design-portfolio .portfolio .design-articles .pic-container .reserved-pic img, #design-portfolio .portfolio .design-articles .pic-container .cutting-board-pic img {
+        max-width: 100%;
+        display: block;
+        max-width: 96%;
+        padding: 2%; }
   #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-draw, #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-draw, #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-pic, #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-pic {
     position: absolute; }
     #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-draw img, #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-draw img, #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-pic img, #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-pic img {
       max-width: 100%; }
   #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-draw {
-    top: 5%;
+    top: 20px;
     left: 57%;
-    width: 15%; }
+    width: 18%; }
   #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-draw {
-    top: 25%;
-    left: 39%;
+    top: 32%;
+    left: 36%;
     width: 15%; }
   #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-pic {
-    top: 5%;
-    left: 5%;
+    top: 20px;
+    left: 20px;
     width: 30%;
     background-color: white; }
     #design-portfolio .portfolio .design-bier-fabriek-1 .barrel-pic img {
@@ -680,8 +707,8 @@ a {
       max-width: 96%;
       padding: 2%; }
   #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-pic {
-    right: 5%;
-    top: 5%;
+    right: 20px;
+    top: 20px;
     width: 20%;
     background-color: white; }
     #design-portfolio .portfolio .design-bier-fabriek-1 .bacheca-pic img {
@@ -733,17 +760,25 @@ a {
   left: 82px;
   width: calc(100vw - 210px);
   height: calc(100vh - 199px); }
-  #design .design .title h1 {
-    font-family: satisfy;
-    text-align: right;
-    margin: 0;
+  #design .design::-webkit-scrollbar {
+    display: none; }
+  #design .design .title {
     padding: 20px 30px 0 0; }
+    #design .design .title h1 {
+      font-family: satisfy;
+      text-align: right;
+      margin: 0; }
+    @media (max-width: 84.375em) {
+      #design .design .title {
+        padding: 20px 30px 0 0; } }
   #design .design .description {
     width: 50%;
+    height: 50%;
     margin: auto;
-    margin-top: 150px; }
+    margin-top: 10vh; }
     @media (max-width: 84.375em) {
       #design .design .description {
+        margin-top: 5vh;
         width: 70%; } }
     #design .design .description p {
       padding: 30px;
@@ -772,7 +807,7 @@ a {
   margin: 0;
   transition: height 1.5s ease-in-out; }
   .header .nav ul {
-    font-size: 0.75em;
+    font-size: 0.9em;
     list-style: none;
     margin-top: 46px;
     padding: 0 64px; }
@@ -783,6 +818,26 @@ a {
       color: white; }
       .header .nav ul .active:hover {
         cursor: default; }
+  @media (max-width: 79.9375em) {
+    .header .nav ul {
+      font-size: 0.7em;
+      margin-top: 78px;
+      margin-left: calc(100vw - 93px);
+      width: 90px;
+      padding: 0; }
+      .header .nav ul li {
+        text-align: center;
+        background-color: #D2232A;
+        border-radius: 4px;
+        display: grid;
+        padding: 10px 0;
+        margin: 2px; }
+        .header .nav ul li a {
+          color: black; }
+      .header .nav ul .active {
+        color: white; }
+        .header .nav ul .active:hover {
+          cursor: default; } }
   .header .company-name {
     position: absolute;
     bottom: 0;
@@ -811,12 +866,17 @@ a {
   left: 82px;
   width: calc(100vw - 210px);
   height: calc(100vh - 199px); }
+  #home-page .home-page-content::-webkit-scrollbar {
+    display: none; }
   #home-page .home-page-content .about {
     height: inherit;
     width: inherit; }
     #home-page .home-page-content .about .title {
       position: relative;
       padding: 7vh 0; }
+      @media (max-width: 79.9375em) {
+        #home-page .home-page-content .about .title {
+          padding: 5vh 0 3vh 0; } }
       #home-page .home-page-content .about .title h2 {
         display: block;
         text-align: center;
@@ -826,30 +886,37 @@ a {
           color: #D2232A; }
     #home-page .home-page-content .about .description {
       margin: auto;
-      width: 50%; }
-      @media (max-width: 81.5625em) {
+      width: 60%; }
+      @media (max-width: 87.5em) {
         #home-page .home-page-content .about .description {
-          width: 70%; } }
+          width: 75%; } }
       #home-page .home-page-content .about .description p {
-        padding: 0.67934783vh 1.20772947vw;
+        padding: 0.3vh 1.2vw;
         line-height: 1.5;
         text-align: center; }
+        @media (max-width: 79.9375em) {
+          #home-page .home-page-content .about .description p {
+            padding: 0.3vh 1.2vw; } }
     #home-page .home-page-content .about .operating-areas {
       margin: auto;
       width: 30%;
       position: relative;
-      margin-top: 9vh; }
-      @media (max-width: 81.5625em) {
+      margin-top: 6.5vh; }
+      @media (max-width: 87.5em) {
         #home-page .home-page-content .about .operating-areas {
-          width: 50%; } }
+          width: 40%;
+          margin-top: 3.5vh; } }
       #home-page .home-page-content .about .operating-areas p {
         text-align: center;
-        padding: 0.67934783vh 1.20772947vw; }
+        padding: 0.3vh 1.2vw; }
+        @media (max-width: 80em) {
+          #home-page .home-page-content .about .operating-areas p {
+            padding: 0.3vh 1.2vw; } }
       #home-page .home-page-content .about .operating-areas .areas {
         text-align: center; }
         #home-page .home-page-content .about .operating-areas .areas ul {
           padding: 0;
-          margin: 5vh 0;
+          margin: 4vh 0;
           list-style: none; }
           #home-page .home-page-content .about .operating-areas .areas ul li {
             margin-top: 2vh; }
@@ -873,6 +940,8 @@ a {
   width: calc(100vw - 210px);
   height: calc(100vh - 199px);
   overflow: scroll; }
+  #interior-design-portfolio .portfolio::-webkit-scrollbar {
+    display: none; }
   #interior-design-portfolio .portfolio .lozio, #interior-design-portfolio .portfolio .marhaba, #interior-design-portfolio .portfolio .private {
     position: relative;
     width: inherit;
@@ -896,22 +965,24 @@ a {
         max-width: 96%;
         padding: 2%; }
   #interior-design-portfolio .portfolio .lozio .lozio-img-1 {
-    top: 40px;
-    left: 150px;
-    width: 28%; }
+    top: 20px;
+    left: 20px;
+    width: 30%;
+    max-width: 500px; }
   #interior-design-portfolio .portfolio .lozio .lozio-img-2 {
     top: 18%;
     right: 20px;
     width: 40%;
-    max-width: 500px; }
+    max-width: 640px; }
   #interior-design-portfolio .portfolio .lozio .lozio-img-3 {
     left: 20px;
     bottom: 20px;
-    width: 29%; }
+    width: 30%;
+    max-width: 500px; }
   #interior-design-portfolio .portfolio .marhaba .marhaba-img-1 {
-    top: 40px;
-    left: 100px;
-    width: 29%; }
+    top: 20px;
+    left: 20px;
+    width: 31%; }
   #interior-design-portfolio .portfolio .marhaba .marhaba-img-2 {
     top: 18%;
     right: 20px;
@@ -922,16 +993,19 @@ a {
     width: 31%; }
   #interior-design-portfolio .portfolio .private .private-img-1 {
     top: 5%;
-    left: 400px;
-    width: 20%; }
+    left: 38%;
+    width: 20%;
+    max-width: 450px; }
   #interior-design-portfolio .portfolio .private .private-img-2 {
     top: 5%;
     right: 20px;
-    width: 35%; }
+    width: 35%;
+    max-width: 500px; }
   #interior-design-portfolio .portfolio .private .private-img-3 {
     left: 20px;
     top: 5%;
-    width: 29.4%; }
+    width: 29.4%;
+    max-width: 420px; }
 
 #interior-design-portfolio .stripes .right-stripe .up-down-nav {
   display: block;
@@ -947,12 +1021,17 @@ a {
   left: 82px;
   width: calc(100vw - 210px);
   height: calc(100vh - 199px); }
+  #interior-design .interior-design::-webkit-scrollbar {
+    display: none; }
   #interior-design .interior-design .title {
-    padding: 20px 30px; }
+    padding: 20px 30px 0 0; }
     #interior-design .interior-design .title h1 {
       font-family: satisfy;
       text-align: right;
       margin: 0; }
+    @media (max-width: 84.375em) {
+      #interior-design .interior-design .title {
+        padding: 20px 30px 0 0; } }
     #interior-design .interior-design .title #int {
       padding-right: 70px; }
   #interior-design .interior-design h3 {
@@ -963,24 +1042,29 @@ a {
     max-width: 1024px;
     padding: 0.67934783vh 1.20772947vw;
     text-align: center; }
-  #interior-design .interior-design .project {
-    margin-top: 6.52173913vh; }
-    #interior-design .interior-design .project p {
-      margin-bottom: 0; }
-    #interior-design .interior-design .project #WeCanWorkItHout {
-      margin-top: 0;
-      padding-top: 0;
-      text-transform: uppercase; }
-      #interior-design .interior-design .project #WeCanWorkItHout span {
-        color: #D2232A; }
-  #interior-design .interior-design .realization {
-    margin-top: 6.52173913vh; }
-  #interior-design .interior-design .analysis, #interior-design .interior-design .realization, #interior-design .interior-design .project {
-    width: 50%;
-    margin: auto; }
+  #interior-design .interior-design .content {
+    margin-top: 10vh; }
     @media (max-width: 84.375em) {
-      #interior-design .interior-design .analysis, #interior-design .interior-design .realization, #interior-design .interior-design .project {
-        width: 70%; } }
+      #interior-design .interior-design .content {
+        margin-top: 4vh; } }
+    #interior-design .interior-design .content .project {
+      margin-top: 6.52173913vh; }
+      #interior-design .interior-design .content .project p {
+        margin-bottom: 0; }
+      #interior-design .interior-design .content .project #WeCanWorkItHout {
+        margin-top: 0;
+        padding-top: 0;
+        text-transform: uppercase; }
+        #interior-design .interior-design .content .project #WeCanWorkItHout span {
+          color: #D2232A; }
+    #interior-design .interior-design .content .realization {
+      margin-top: 6.52173913vh; }
+    #interior-design .interior-design .content .analysis, #interior-design .interior-design .content .realization, #interior-design .interior-design .content .project {
+      width: 50%;
+      margin: auto; }
+      @media (max-width: 84.375em) {
+        #interior-design .interior-design .content .analysis, #interior-design .interior-design .content .realization, #interior-design .interior-design .content .project {
+          width: 70%; } }
   #interior-design .interior-design .portfolio {
     position: absolute;
     bottom: 20px;
@@ -999,21 +1083,28 @@ a {
   width: calc(100vw - 210px);
   height: calc(100vh - 199px);
   overflow: scroll; }
+  #reviews .portfolio::-webkit-scrollbar {
+    display: none; }
   #reviews .portfolio .reviews-page-1, #reviews .portfolio .reviews-page-2 {
     position: relative;
     width: inherit;
     height: inherit;
     border-bottom: 1px solid #D2232A; }
-  #reviews .portfolio .reviews-page-1 .title h1 {
-    font-family: satisfy;
-    text-align: right;
-    margin: 0;
+  #reviews .portfolio .reviews-page-1 .title {
     padding: 20px 30px 0 0; }
+    #reviews .portfolio .reviews-page-1 .title h1 {
+      font-family: satisfy;
+      text-align: right;
+      margin: 0; }
+    @media (max-width: 84.375em) {
+      #reviews .portfolio .reviews-page-1 .title {
+        padding: 20px 30px 0 0; } }
   #reviews .portfolio .reviews-page-1 .entree {
     position: absolute;
-    top: 25%;
-    right: 4%;
-    width: 380px;
+    top: 20%;
+    left: 40px;
+    width: 39%;
+    max-width: 650px;
     background-color: white; }
     #reviews .portfolio .reviews-page-1 .entree img {
       display: block;
@@ -1021,9 +1112,10 @@ a {
       padding: 2%; }
   #reviews .portfolio .reviews-page-1 .bierfabriek-delft {
     position: absolute;
-    top: 4%;
-    left: 4%;
-    width: 500px;
+    top: 64px;
+    right: 40px;
+    width: 40%;
+    max-width: 660px;
     background-color: white; }
     #reviews .portfolio .reviews-page-1 .bierfabriek-delft img {
       display: block;
@@ -1041,9 +1133,10 @@ a {
       margin: 1vh 0 0 0; }
   #reviews .portfolio .reviews-page-2 .giuseppe {
     position: absolute;
-    right: 2%;
-    top: 4%;
-    width: 270px;
+    right: 40px;
+    top: 40px;
+    width: 20%;
+    max-width: 334px;
     background-color: white; }
     #reviews .portfolio .reviews-page-2 .giuseppe img {
       display: block;
@@ -1051,9 +1144,10 @@ a {
       padding: 2%; }
   #reviews .portfolio .reviews-page-2 .genius {
     position: absolute;
-    top: 2%;
-    left: 1%;
-    width: 530px;
+    top: 40px;
+    left: 40px;
+    width: 43%;
+    max-width: 640px;
     background-color: white; }
     #reviews .portfolio .reviews-page-2 .genius img {
       display: block;

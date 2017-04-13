@@ -3,11 +3,7 @@
     @include container
     //background-color: $olive
     .title
-      padding: 20px 30px
-      h1
-        font-family: satisfy
-        text-align: right
-        margin: 0
+      @include chapter-title
       #int
           padding-right: 70px
       #des
@@ -21,25 +17,28 @@
       max-width: 1024px
       padding: 0.67934783vh 1.20772947vw
       text-align: center
-
-    .project
-      margin-top: 6.52173913vh
-      p
-        margin-bottom: 0
-      #WeCanWorkItHout
-        margin-top: 0
-        padding-top: 0
-        text-transform: uppercase
-        span
-          color: $houtRed
-
-    .realization
-      margin-top: 6.52173913vh
-
-    .analysis, .realization, .project
-      width: 50%
-      margin: auto
+    .content
+      margin-top: 10vh
       @include maxw(1350)
-        width: 70%
+        margin-top: 4vh
+      .project
+        margin-top: 6.52173913vh
+        p
+          margin-bottom: 0
+        #WeCanWorkItHout
+          margin-top: 0
+          padding-top: 0
+          text-transform: uppercase
+          span
+            color: $houtRed
+
+      .realization
+        margin-top: 6.52173913vh
+
+      .analysis, .realization, .project
+        width: 50%
+        margin: auto
+        @include maxw(1350)
+          width: 70%
 
     @include portfolio-button
