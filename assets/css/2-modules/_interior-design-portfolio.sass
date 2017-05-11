@@ -17,16 +17,28 @@
 
     .lozio
       .lozio-img-1
+        animation-name: appear
+        animation-duration: 800ms
+        animation-timing-function: ease
+        animation-fill-mode: forwards
         top: 20px
         left: 20px
         width: 30%
         max-width: 500px
       .lozio-img-2
+        animation-name: appear
+        animation-duration: 800ms
+        animation-timing-function: ease
+        animation-fill-mode: forwards
         top: 18%
         right: 20px
         width: 40%
         max-width: 640px
       .lozio-img-3
+        animation-name: appear
+        animation-duration: 800ms
+        animation-timing-function: ease
+        animation-fill-mode: forwards
         left: 20px
         bottom: 20px
         width: 30%
@@ -72,3 +84,17 @@
         .material-icons
           font-size: 2em
           cursor: pointer
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes appear-slide
+  0%
+    opacity: 0
+    transform: translateX(-200px)
+  100%
+    opacity: 1
+    transform: translateX(0px)

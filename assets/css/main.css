@@ -585,6 +585,9 @@ a {
     width: 100%;
     text-align: center; }
 
+#customers ::-webkit-scrollbar {
+  display: none; }
+
 #customers .customers {
   position: absolute;
   top: 73px;
@@ -617,13 +620,13 @@ a {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     background-color: white; }
-    #customers .customers .logos .bacaro, #customers .customers .logos .marhaba, #customers .customers .logos .lozio, #customers .customers .logos .bierfabriek-ams, #customers .customers .logos .besseling, #customers .customers .logos .feduzzi, #customers .customers .logos .bierfabriek-delft, #customers .customers .logos .konijnenburg, #customers .customers .logos .gusto, #customers .customers .logos .repubblica {
+    #customers .customers .logos .bacaro, #customers .customers .logos .marhaba, #customers .customers .logos .lozio, #customers .customers .logos .bierfabriek-ams, #customers .customers .logos .besseling, #customers .customers .logos .feduzzi, #customers .customers .logos .bierfabriek-delft, #customers .customers .logos .konijnenburg, #customers .customers .logos .gusto, #customers .customers .logos .repubblica, #customers .customers .logos .devint {
       width: 17%;
-      max-width: 200px; }
-      #customers .customers .logos .bacaro img, #customers .customers .logos .marhaba img, #customers .customers .logos .lozio img, #customers .customers .logos .bierfabriek-ams img, #customers .customers .logos .besseling img, #customers .customers .logos .feduzzi img, #customers .customers .logos .bierfabriek-delft img, #customers .customers .logos .konijnenburg img, #customers .customers .logos .gusto img, #customers .customers .logos .repubblica img {
-        display: block;
-        max-width: 96%;
-        padding: 2%; }
+      max-width: 200px;
+      min-width: 120px; }
+      #customers .customers .logos .bacaro img, #customers .customers .logos .marhaba img, #customers .customers .logos .lozio img, #customers .customers .logos .bierfabriek-ams img, #customers .customers .logos .besseling img, #customers .customers .logos .feduzzi img, #customers .customers .logos .bierfabriek-delft img, #customers .customers .logos .konijnenburg img, #customers .customers .logos .gusto img, #customers .customers .logos .repubblica img, #customers .customers .logos .devint img {
+        padding: 10px;
+        max-width: calc(100% - 20px); }
 
 #design-portfolio .portfolio {
   position: absolute;
@@ -775,10 +778,10 @@ a {
     width: 50%;
     height: 50%;
     margin: auto;
-    margin-top: 10vh; }
+    margin-top: 20vh; }
     @media (max-width: 84.375em) {
       #design .design .description {
-        margin-top: 5vh;
+        margin-top: 15vh;
         width: 70%; } }
     #design .design .description p {
       padding: 30px;
@@ -818,7 +821,7 @@ a {
       color: white; }
       .header .nav ul .active:hover {
         cursor: default; }
-  @media (max-width: 79.9375em) {
+  @media (max-width: 72.25em) {
     .header .nav ul {
       font-size: 0.7em;
       margin-top: 78px;
@@ -831,9 +834,11 @@ a {
         border-radius: 4px;
         display: grid;
         padding: 10px 0;
-        margin: 2px; }
+        margin: 5px 2px; }
         .header .nav ul li a {
           color: black; }
+          .header .nav ul li a:hover {
+            color: white; }
       .header .nav ul .active {
         color: white; }
         .header .nav ul .active:hover {
@@ -846,6 +851,7 @@ a {
     text-transform: uppercase;
     font-size: 1.3em; }
     .header .company-name h1 {
+      color: white;
       margin: 0;
       padding: 0; }
       .header .company-name h1 span {
@@ -859,6 +865,22 @@ a {
 
 #home-page .nav {
   z-index: 1; }
+
+#home-page .header .nav {
+  display: none; }
+
+#home-page .header .company-name {
+  opacity: 0;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms; }
 
 #home-page .home-page-content {
   position: absolute;
@@ -933,6 +955,110 @@ a {
         #home-page .home-page-content .about .motto p span {
           color: #D2232A; }
 
+#home-page .stripes .top-stripe {
+  -webkit-animation-name: go-left;
+          animation-name: go-left;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+#home-page .stripes .right-stripe {
+  -webkit-animation-name: go-down;
+          animation-name: go-down;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+#home-page .stripes .bottom-stripe {
+  -webkit-animation-name: go-right;
+          animation-name: go-right;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+#home-page .stripes .left-stripe {
+  -webkit-animation-name: go-up;
+          animation-name: go-up;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes go-up {
+  0% {
+    -webkit-transform: translateY(1080px);
+            transform: translateY(1080px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes go-up {
+  0% {
+    -webkit-transform: translateY(1080px);
+            transform: translateY(1080px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@-webkit-keyframes go-down {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes go-down {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px); }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@-webkit-keyframes go-left {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px); }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+@keyframes go-left {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px); }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+@-webkit-keyframes go-right {
+  0% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px); }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+@keyframes go-right {
+  0% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px); }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
 #interior-design-portfolio .portfolio {
   position: absolute;
   top: 73px;
@@ -965,16 +1091,40 @@ a {
         max-width: 96%;
         padding: 2%; }
   #interior-design-portfolio .portfolio .lozio .lozio-img-1 {
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     top: 20px;
     left: 20px;
     width: 30%;
     max-width: 500px; }
   #interior-design-portfolio .portfolio .lozio .lozio-img-2 {
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     top: 18%;
     right: 20px;
     width: 40%;
     max-width: 640px; }
   #interior-design-portfolio .portfolio .lozio .lozio-img-3 {
+    -webkit-animation-name: appear;
+            animation-name: appear;
+    -webkit-animation-duration: 800ms;
+            animation-duration: 800ms;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     left: 20px;
     bottom: 20px;
     width: 30%;
@@ -1014,6 +1164,38 @@ a {
   #interior-design-portfolio .stripes .right-stripe .up-down-nav .material-icons {
     font-size: 2em;
     cursor: pointer; }
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes appear-slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
+
+@keyframes appear-slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px); } }
 
 #interior-design .interior-design {
   position: absolute;
@@ -1185,7 +1367,6 @@ a {
   position: fixed;
   top: 0;
   z-index: 3;
-  position: fixed;
   right: 96px;
   width: 32px;
   height: calc(100vh - 96px);

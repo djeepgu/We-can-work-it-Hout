@@ -1,4 +1,6 @@
 #customers
+  ::-webkit-scrollbar
+    display: none
   .customers
     position: absolute
     top: 73px
@@ -6,7 +8,6 @@
     width: calc(100vw - 210px)
     height: calc(100vh - 199px)
     overflow: scroll
-    //background-color: $olive
     .title
       @include chapter-title
       #some
@@ -22,8 +23,11 @@
       align-items: center
       justify-content: space-around
       background-color: white
-      .bacaro, .marhaba, .lozio, .bierfabriek-ams, .besseling, .feduzzi, .bierfabriek-delft, .konijnenburg, .gusto, .repubblica
+      .bacaro, .marhaba, .lozio, .bierfabriek-ams, .besseling, .feduzzi, .bierfabriek-delft, .konijnenburg, .gusto, .repubblica, .devint
         width: 17%
         max-width: 200px
+        min-width: 120px
         img
-          @include image-border
+          //@include image-border
+          padding: 10px
+          max-width: calc(100% - 20px)

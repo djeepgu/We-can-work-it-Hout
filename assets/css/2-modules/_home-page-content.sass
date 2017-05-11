@@ -1,11 +1,21 @@
 #home-page
+  .header
+    .nav
+      display: none
+    .company-name
+      opacity: 0
+      animation-name: appear
+      animation-duration: 500ms
+      animation-fill-mode: forwards
+      animation-timing-function: ease
+      animation-delay: 1000ms
+
   .home-page-content
     @include container
 
     .about
       height: inherit
       width: inherit
-      //background-color: $teal
       .title
         position: relative
         padding: 7vh 0
@@ -19,7 +29,6 @@
           span
             color: $houtRed
       .description
-        //background-color: green
         margin: auto
         width: 60%
         @include maxw(1400)
@@ -44,7 +53,6 @@
           @include maxw(1280)
             padding: 0.3vh 1.2vw
         .areas
-          //background-color: green
           text-align: center
           ul
             padding: 0
@@ -67,3 +75,55 @@
           font-size: 22px
           span
             color: $houtRed
+
+  .stripes
+
+    .top-stripe
+      //from right going left
+      animation-name: go-left
+      animation-duration: 1500ms
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+    .right-stripe
+      //from top going down
+      animation-name: go-down
+      animation-duration: 1500ms
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+    .bottom-stripe
+      //from left going right
+      animation-name: go-right
+      animation-duration: 1500ms
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+    .left-stripe
+      animation-name: go-up
+      animation-duration: 1500ms
+      animation-timing-function: ease-in-out
+      animation-fill-mode: forwards
+      // from bottom going up
+
+
+@keyframes go-up
+  0%
+    transform: translateY(1080px)
+  100%
+    transform: translateY(0px)
+
+@keyframes go-down
+  0%
+    transform: translateY(-1000px)
+  100%
+    transform: translateY(0px)
+
+@keyframes go-left
+  0%
+    transform: translateX(2000px)
+  100%
+    transform: translateX(0px)
+
+@keyframes go-right
+  0%
+    transform: translateX(-2000px)
+  100%
+    transform: translateX(0px)

@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-  $("#home-page .nav").hide()
+  // HIDE NAVIGATION AND CONTENT ON THE HOME PAGE
+  $("#home-page .nav").hide();
+  $("#home-page .about").hide();
   // AUTOMATIC COMPANY NAME SLIDE UP
   setTimeout( function() {
     // RESIZE HEIGHT OF HEADER
@@ -9,7 +11,8 @@ $( document ).ready(function() {
 
     // AFTER NAME SLIDES UP SHOW NAVIGATION BAR
   setTimeout( function() {
-    $("#home-page .nav").fadeIn();
+    $("#home-page .nav").css("display", "block").fadeIn();
+    $("#home-page .about").fadeIn("slow");
   }, 4500);
 
     // NAVIGATION ACTIVE STATE
