@@ -33,12 +33,17 @@
         width: 60%
         @include maxw(1400)
           width: 75%
+        @include maxh(750)
+          width: 98%
         p
           padding: 0.3vh 1.2vw
           line-height: 1.5
           text-align: center
           @include maxw(1279)
             padding: 0.3vh 1.2vw
+          @include maxh(750)
+            line-height: 1.15
+
       .operating-areas
         margin: auto
         width: 30%
@@ -47,6 +52,11 @@
         @include maxw(1400)
           width: 40%
           margin-top: 3.5vh
+        @include maxh(750)
+          width: 98%
+          .we-define-it, .motto
+            width: 50%
+            margin: 0 auto
         p
           text-align: center
           padding: 0.3vh 1.2vw

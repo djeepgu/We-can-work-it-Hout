@@ -33,7 +33,7 @@
         li
           text-align: center
           background-color: $houtRed
-          border-radius: 4px
+          //border-radius: 4px
           display: grid
           padding: 10px 0
           margin: 5px 2px
@@ -60,6 +60,11 @@
       padding: 0
       span
         visibility: hidden
+
+@include maxh(600)
+  .header
+    height: 48px
+
 
 #home-page
   .header

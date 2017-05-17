@@ -1,34 +1,21 @@
-@mixin bp($point)
-  @if $point == small
-    @media (max-width: 320px)
-       @content
-
-  @else if $point == normal
-    @media (min-width: 321px) and (max-width: 425px)
-      @content
-
-  @else if $point == large
-    @media (min-width: 426px) and (max-width: 768px)
-      @content
-
-  @else if $point == larger
-    @media (min-width: 769px)
-      @content
-
-  @else if $point == huge
-    @media (min-width: 1025px)
-      @content
-
 // Mobile-first
 
 @mixin minw($pixels)
   @media (min-width: $pixels/16+em)
     @content
 
+@mixin minh($pixels)
+  @media (min-height: $pixels/16+em)
+    @content
+
 // Desktop-first
 
 @mixin maxw($pixels)
   @media (max-width: $pixels/16+em)
+    @content
+
+@mixin maxh($pixels)
+  @media (max-height: $pixels/16+em)
     @content
 
 // Letter H white stroke around
@@ -48,17 +35,15 @@
 @mixin bottom-info
   position: absolute
   bottom: 0
-  padding-bottom: 0.67934783vh
+  padding-bottom: 10px
   text-align: center
-  left: 50%
-  transform: translate(-50%, 0)
+  //left: 50%
+  left: 10px
+  //transform: translate(-50%, 0)
   p
     margin: 1vh 0 0 0
 
-@mixin image-border
-  display: block
-  max-width: 96%
-  padding: 2%
+
 
 @mixin sidebar-nav
   .stripes
@@ -79,6 +64,13 @@
   left: 82px
   width: calc(100vw - 210px)
   height: calc(100vh - 199px)
+  @include maxh(750)
+    width: calc(100vw - 137px)
+    height: calc(100vh - 103px)
+    left: 9px
+  @include maxh(600)
+    top: 57px
+    height: calc(100vh - 87px)
 
 @mixin portfolio-button
   .portfolio
@@ -91,6 +83,8 @@
       color: white
       &:hover
         color: $houtRed
+    @include maxw(960)
+      left: 20px
 
 @mixin chapter-title
   padding: 20px 30px 0 0

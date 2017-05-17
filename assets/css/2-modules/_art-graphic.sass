@@ -1,11 +1,6 @@
 #art-graphic
   .art-graphic
-    position: absolute
-    top: 73px
-    left: 82px
-    width: calc(100vw - 210px)
-    height: calc(100vh - 199px)
-    //background-color: $blue
+    @include container
     .title
       @include chapter-title
       #art
@@ -15,6 +10,9 @@
       margin: auto
       @include maxw(1350)
         width: 70%
+      @include maxw(850)
+        width: 95%
+        
       p
         padding: 30px
         margin-top: 100px

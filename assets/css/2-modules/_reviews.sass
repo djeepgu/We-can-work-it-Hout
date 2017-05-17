@@ -7,53 +7,60 @@
       width: inherit
       height: inherit
       border-bottom: 1px solid $houtRed
+
     .reviews-page-1
-      //background-color: $blue
       .title
         @include chapter-title
-      .entree
-        position: absolute
-        top: 20%
-        left: 40px
-        width: 39%
-        max-width: 650px
-        background-color: white
+      .container
+        display: flex
+        flex-flow: row nowrap
+        justify-content: space-around
         img
-          @include image-border
-        @include maxw(1024)
-      .bierfabriek-delft
-        position: absolute
-        top: 64px
-        right: 40px
-        width: 40%
-        max-width: 660px
-        background-color: white
-        img
-          @include image-border
+          max-width: 100%
+          max-height: 100%
+        @include maxw(850)
+          flex-flow: column wrap
+          justify-content: center
+          align-items: center
+        .entree
+          width: 45%
+          max-width: 650px
+          @include maxh(900)
+            height: 90%
+          @include maxw(850)
+          width: 60%
+          height: 45%
+        .bierfabriek-delft
+          width: 50%
+          max-width: 660px
+          @include maxh(900)
+            height: 90%
+          @include maxw(850)
+          width: 60%
+          height: 45%
 
       .info
         @include bottom-info
 
     .reviews-page-2
-      //background-color: $teal
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-around
+      align-items: center
+      img
+        max-width: 100%
+        max-height: 100%
       .giuseppe
-        position: absolute
-        right: 40px
-        top: 40px
-        width: 20%
+        order: 2
+        width: 30%
         max-width: 334px
-        background-color: white
-        img
-          @include image-border
+        @include maxh(900)
+          height: 90%
       .genius
-        position: absolute
-        top: 40px
-        left: 40px
-        width: 43%
+        width: 60%
         max-width: 640px
-        background-color: white
-        img
-          @include image-border
+        @include maxh(900)
+          height: 90%
       .info
         @include bottom-info
 

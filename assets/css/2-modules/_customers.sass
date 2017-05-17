@@ -2,11 +2,7 @@
   ::-webkit-scrollbar
     display: none
   .customers
-    position: absolute
-    top: 73px
-    left: 82px
-    width: calc(100vw - 210px)
-    height: calc(100vh - 199px)
+    @include container
     overflow: scroll
     .title
       @include chapter-title
@@ -16,7 +12,9 @@
 
     .logos
       position: relative
-      margin: 50px 0
+      margin: 0 auto
+      top: calc(50% - 48px)
+      transform: translateY(-50%)
       display: flex
       flex-direction: row
       flex-wrap: wrap
@@ -26,7 +24,7 @@
       .bacaro, .marhaba, .lozio, .bierfabriek-ams, .besseling, .feduzzi, .bierfabriek-delft, .konijnenburg, .gusto, .repubblica, .devint
         width: 17%
         max-width: 200px
-        min-width: 120px
+        min-width: 150px
         img
           //@include image-border
           padding: 10px

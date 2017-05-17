@@ -29,8 +29,8 @@
       width: 32px
       height: 64px
       top: 0
-      b
 
+      b
         display: block
         position: absolute
         left: 1px
@@ -43,6 +43,7 @@
 
     .up-down-nav
       display: none
+
   .bottom-stripe
     z-index: 3
     position: fixed
@@ -50,7 +51,6 @@
     width: calc(100vw - 96px)
     height: 30px
     background-color: $houtRed
-
     .motto
       font-family: satisfy
       font-size: 22px
@@ -69,6 +69,28 @@
     position: fixed
     left: 73px
     bottom: 0
+
+  @include maxh(750)
+    .top-stripe
+      width: 100vw
+    .right-stripe
+      height: 100vh
+    .bottom-stripe
+      bottom: 0
+    .left-stripe
+      left: 0
+  @include maxh(600)
+    .top-stripe
+      top: 48px
+    .right-stripe
+      .drop-letter
+        b
+          top: 2px
+
+    .bottom-stripe
+
+    .left-stripe
+      height: calc(100vh - 48px)
 
 #home-page
   .stripes
