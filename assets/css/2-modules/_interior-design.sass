@@ -5,7 +5,9 @@
     .title
       @include chapter-title
       #int
-          padding-right: 70px
+        padding-right: 70px
+        @include maxw(650)
+          padding-right: 50px
       #des
 
     h3
@@ -19,8 +21,10 @@
       text-align: center
     .content
       margin-top: 8vh
+      //overflow: scroll
       @include maxw(1350)
         margin-top: 4vh
+      
       .project
         margin-top: 6.52173913vh
         p

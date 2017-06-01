@@ -47,6 +47,9 @@
       flex-flow: row nowrap
       align-items: center
       justify-content: space-around
+      @include maxw(650)
+        flex-direction: column
+        flex-wrap: wrap
       .bacheca-draw, .barrel-draw, .barrel-pic, .bacheca-pic
         text-align: center
         img
@@ -58,9 +61,17 @@
         width: 20%
         @include maxh(900)
           height: 90%
+        @include maxw(650)
+          width: 50%
+          height: 45%
+          //order:
       .barrel-draw
         order: 1
         width: 20%
+        @include maxw(650)
+          width: 50%
+          height: 45%
+          order: 2
 
       .barrel-pic
         order: 2
@@ -69,6 +80,10 @@
           height: 90%
         @include maxh(900)
           height: 90%
+        @include maxw(650)
+          width: 50%
+          height: 45%
+          order: 1
       .bacheca-pic
         order: 3
         width: 20%
@@ -77,6 +92,10 @@
           height: 90%
         @include maxh(900)
           height: 90%
+        @include maxw(650)
+          width: 50%
+          height: 45%
+
 
 
       .info
@@ -97,5 +116,8 @@
           max-height: 100%
       .info
         @include bottom-info
+        left: 50%
+        transform: translate(-50%, 0)
+        bottom: 5px
 
   @include sidebar-nav

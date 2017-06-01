@@ -15,6 +15,8 @@
         align-items: center
         justify-content: space-around
         height: 50%
+        @include maxw(650)
+          height: 35%
         .delft-art-1, .delft-art-2, .delft-art-3
           width: 30%
           max-width: 284px
@@ -43,6 +45,8 @@
       flex-direction: row
       align-items: center
       justify-content: space-around
+      @include maxw(650)
+        flex-wrap: wrap
       img
         max-width: 100%
         max-height: 100%
@@ -53,6 +57,11 @@
         max-width: 417px
         @include maxh(950)
           height: 90%
+        @include maxw(650)
+          height: 65%
+          width: 60%
+          margin-left: auto
+          margin-right: 5px
 
       .amsterdam-art-2
         text-align: center
@@ -61,6 +70,9 @@
         max-width: 960px
         @include maxh(950)
           height: 70%
+        @include maxw(650)
+          height: 30%
+          width: 95%
 
       .info
         @include bottom-info

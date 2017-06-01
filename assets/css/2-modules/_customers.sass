@@ -13,8 +13,8 @@
     .logos
       position: relative
       margin: 0 auto
-      top: calc(50% - 48px)
-      transform: translateY(-50%)
+      //top: 50%
+      //transform: translateY(-50%)
       display: flex
       flex-direction: row
       flex-wrap: wrap
@@ -25,6 +25,8 @@
         width: 17%
         max-width: 200px
         min-width: 150px
+        @include maxw(650)
+          width: 100%
         img
           //@include image-border
           padding: 10px

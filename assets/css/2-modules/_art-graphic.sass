@@ -11,12 +11,14 @@
       @include maxw(1350)
         width: 70%
       @include maxw(850)
-        width: 95%
-        
+        width: 100%
+
       p
         padding: 30px
         margin-top: 100px
         text-align: center
         line-height: 1.6
+        @include maxw(650)
+          margin-top: 4vh
 
     @include portfolio-button

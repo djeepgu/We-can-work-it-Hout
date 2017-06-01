@@ -21,6 +21,8 @@
         padding: 7vh 0
         @include maxw(1279)
           padding: 5vh 0 3vh 0
+        @include maxw(650)
+          padding: 18px 0 10px 0
         h2
           display: block
           text-align: center
@@ -82,7 +84,9 @@
         p
           text-align: right
           font-family: satisfy
-          font-size: 22px
+          font-size: 1.4em
+          @include maxw(650)
+            margin: 10px 0
           span
             color: $houtRed
 

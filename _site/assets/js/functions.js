@@ -2,11 +2,13 @@ $( document ).ready(function() {
   // HIDE NAVIGATION AND CONTENT ON THE HOME PAGE
   $("#home-page .nav").hide();
   $("#home-page .about").hide();
+
   // AUTOMATIC COMPANY NAME SLIDE UP
   setTimeout( function() {
     // RESIZE HEIGHT OF HEADER
-    $("#home-page .header").css('height', '64px');
-    $("#home-page .stripes .drop-letter").css('height', '64px');
+    $("#home-page .header").addClass("shrink");
+    $("#home-page .stripes .drop-letter").addClass("shrink");
+    
   }, 3000);
 
     // AFTER NAME SLIDES UP SHOW NAVIGATION BAR
@@ -62,5 +64,30 @@ $( document ).ready(function() {
 
   });
 
+  // MOBILE BURGER MENU
+  // SHOW SPLASH MENU
+  $(".menu-wrap").on("click", function () {
+    showSplash();
+  });
+
+  // HIDE SPLASH MENU
+  $(".close").on("click", function () {
+    hideSplash();
+  });
+
+  $("#splash").on("click", function(event) {
+    if (event.target == this) {
+      hideSplash();
+    }
+
+  });
 
 });
+
+function showSplash() {
+  $("#splash").addClass("show").removeClass("hide");
+}
+
+function hideSplash() {
+  $("#splash").addClass("hide").removeClass("show");
+}

@@ -37,13 +37,10 @@
   bottom: 0
   padding-bottom: 10px
   text-align: center
-  //left: 50%
   left: 10px
-  //transform: translate(-50%, 0)
   p
     margin: 1vh 0 0 0
-
-
+  
 
 @mixin sidebar-nav
   .stripes
@@ -52,9 +49,12 @@
         display: block
         position: absolute
         bottom: 30px
+
         .material-icons
           font-size: 2em
           cursor: pointer
+          @include maxw(650)
+            font-size: 32px
 
 @mixin container
   &::-webkit-scrollbar
@@ -71,6 +71,12 @@
   @include maxh(600)
     top: 57px
     height: calc(100vh - 87px)
+  @include maxw(650)
+    overflow: scroll
+    width: calc(100vw - 41px)
+    height: calc(100vh - 87px)
+    left: 9px
+    top: 57px
 
 @mixin portfolio-button
   .portfolio
@@ -85,6 +91,9 @@
         color: $houtRed
     @include maxw(960)
       left: 20px
+    @include maxw(650)
+      position: relative
+      padding-top: 20px
 
 @mixin chapter-title
   padding: 20px 30px 0 0
@@ -92,6 +101,9 @@
     font-family: satisfy
     text-align: right
     margin: 0
-
   @include maxw(1350)
     padding: 20px 30px 0 0
+  @include maxw(650)
+    padding: 10px
+    h1
+      font-size: 1.7em

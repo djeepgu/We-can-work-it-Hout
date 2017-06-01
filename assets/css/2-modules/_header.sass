@@ -9,6 +9,10 @@
   width: 100vw
   margin: 0
   transition: height 1.5s ease-in-out
+  @include maxw(650)
+    height: 48px
+    width: calc(100vw - 32px)
+    left: 0
 
   .nav
     ul
@@ -45,7 +49,9 @@
           color: white
           &:hover
             cursor: default
-
+    @include maxw(650)
+      ul
+        display: none
 
   .company-name
     position: absolute
@@ -54,12 +60,33 @@
     text-align: right
     text-transform: uppercase
     font-size: 1.3em
+    @include maxw(650)
+      display: none
     h1
       color: white
       margin: 0
       padding: 0
       span
         visibility: hidden
+  .mobile-company
+    @include minw(650)
+      display: none
+    text-align: center
+    text-transform: uppercase
+    font-size: 0.92em
+    h1
+      color: white
+      margin: 10px 0
+      padding: 0
+      span
+        color: $houtRed
+
+@keyframes slow-fade
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
 
 @include maxh(600)
   .header
@@ -75,3 +102,16 @@
 
   .nav
       z-index: 1
+
+  .shrink
+    height: 64px
+    @include maxw(650)
+      height: 48px
+
+  .mobile-company
+    opacity: 0
+    animation-name: slow-fade
+    animation-delay: 2s
+    animation-duration: 0.7s
+    animation-fill-mode: forwards
+    animation-timing-function: ease-in

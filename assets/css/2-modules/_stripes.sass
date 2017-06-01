@@ -7,6 +7,9 @@
     height: 9px
     width: calc(100vw - 73px)
     background-color: $houtRed
+    @include maxw(650)
+      top: 48px
+      width: 100vw
 
   .right-stripe
     position: fixed
@@ -16,20 +19,30 @@
     width: 32px
     height: calc(100vh - 96px)
     background-color: $houtRed
+    @include maxw(650)
+      right: 0
+      height: 100vh
     .menu-wrap
       display: none
+      position: absolute
       height: 36px
       width: 36px
+      top: 12px
+      @include maxw(650)
+        top: 0
+        display: block
       .material-icons
-        font-size: 175%
-        text-align: center
+        font-size: 24px
+        padding: 12px 4px
+        //text-align: center
     .drop-letter
       transition: height 1.5s ease-in-out
       position: absolute
       width: 32px
       height: 64px
       top: 0
-
+      @include maxw(650)
+        display: none
       b
         display: block
         position: absolute
@@ -51,6 +64,9 @@
     width: calc(100vw - 96px)
     height: 30px
     background-color: $houtRed
+    @include maxw(650)
+      width: 100vw
+      bottom: 0
     .motto
       font-family: satisfy
       font-size: 22px
@@ -69,6 +85,9 @@
     position: fixed
     left: 73px
     bottom: 0
+    @include maxw(650)
+      left: 0
+      height: calc(100vh - 57px)
 
   @include maxh(750)
     .top-stripe
@@ -96,3 +115,7 @@
   .stripes
     .drop-letter
       height: calc(100vh - 128px)
+    .shrink
+      height: 64px
+      @include maxw(650)
+        height: 48px
