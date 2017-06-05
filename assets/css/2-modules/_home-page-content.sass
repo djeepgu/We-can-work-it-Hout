@@ -14,6 +14,7 @@
     @include container
 
     .about
+      position: absolute
       height: inherit
       width: inherit
       .title
@@ -22,6 +23,7 @@
         @include maxw(1279)
           padding: 5vh 0 3vh 0
         @include maxw(650)
+          display: none
           padding: 18px 0 10px 0
         h2
           display: block
